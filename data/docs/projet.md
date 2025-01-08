@@ -40,10 +40,5 @@ En parallèle, l'application est une véritable base de données de l'univers Po
 2. **Frontend** : Interface utilisateur simple et intuitive.
 3. **Base de données** : Inventaire des cartes, decks et Pokémon (jeux vidéo).
 
-## Documentation
-
-- **[1. Plan d'exécution](./data/docs/plan_execution.md)**
-- **[2. Spécifications Fonctionnelles](./data/docs/specifications.md)**
-
 ## À propos
 Développé par Jean Paul Van Tongeren dans le cadre d’un projet personnel pour regrouper les informations et optimiser les collections de cartes Pokémon. 😊
