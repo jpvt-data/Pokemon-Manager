@@ -17,7 +17,7 @@ Ce projet me permet de mettre en pratique mes compétences en **développement b
 Voici un aperçu des fichiers et dossiers qui structurent le projet :  
 
 ### 1. **Planification et conception**  
-- [`plan_execution.md`](./data/plan_execution.md) : Décrit les étapes du projet, les jalons et les objectifs.  
+- [`plan_execution.md`](../data/plan_execution.md) : Décrit les étapes du projet, les jalons et les objectifs.  
 - `descriptif_projet.md` : Présentation des fonctionnalités principales et des spécifications initiales.  
 
 ### 2. **Architecture technique**  
