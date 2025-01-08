@@ -1,7 +1,9 @@
 # Pokémon Manager : Gestionnaire de Collection et Optimisation de Decks
 
 ## Description du projet
-**Pokémon Manager** est une application conçue pour aider les collectionneurs et joueurs de cartes Pokémon à gérer leur collection physique et à optimiser leurs decks. Que tu sois un passionné cherchant à inventorier tes cartes ou un compétiteur souhaitant maximiser l'efficacité de tes decks, ce projet offre une solution complète et accessible.
+**Pokémon Manager** est une application complète et accessible pour aider les collectionneurs et joueurs de cartes Pokémon à gérer leur collection physique et à optimiser leurs decks.  
+Elle s'adresse aux passionnés cherchant à inventorier leurs cartes ou aux compétiteurs souhaitant maximiser l'efficacité de leurs decks.  
+En parallèle, l'application est une véritable base de données de l'univers Pokémon.
 
 ### Fonctionnalités principales
 
