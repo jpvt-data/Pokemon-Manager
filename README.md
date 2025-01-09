@@ -1,49 +1,82 @@
-# Pokémon Manager : Gestionnaire de Collection et Optimisation de Decks
+# Pokémon Manager  
 
-## Description du projet
-**Pokémon Manager** est une application complète et accessible pour aider les collectionneurs et joueurs de cartes Pokémon à gérer leur collection physique et à optimiser leurs decks.  
-Elle s'adresse aux passionnés cherchant à inventorier leurs cartes ou aux compétiteurs souhaitant maximiser l'efficacité de leurs decks.  
-En parallèle, l'application est une véritable base de données de l'univers Pokémon.
+## 🚀 Présentation du projet  
 
-### Fonctionnalités principales
+**Pokémon Manager** est une application web dédiée aux collectionneurs et joueurs de cartes Pokémon.  
+Elle vise à simplifier la gestion des collections, optimiser la création de decks, et fournir des outils intuitifs pour organiser, analyser et enrichir l'expérience des utilisateurs.  
 
-#### 1. Gestion avancée de la collection
-- **Inventaire des cartes** : Ajout des cartes avec des détails comme le nom, l'extension, la rareté et l'état.
-- **Suivi de l'état des cartes** : Indication de l'état d'une carte (Neuve, Très bonne, Bonne ou Moyenne).
-- **Cartes manquantes** : Identification des cartes absentes d'une extension pour compléter la collection.
-- **Import/Export** : Gestion des données via des fichiers CSV ou Excel.
-- **Étiquetage personnalisé** : Organisation des cartes avec des tags comme "Échange", "Favoris" ou "À vendre".
+Ce projet me permet de mettre en pratique mes compétences en **développement backend**, **frontend**, **base de données**, et **gestion de projet**, tout en démontrant ma capacité à structurer et documenter un projet complet.  
 
-#### 2. Optimisation et gestion des decks
-- **Construction manuelle de decks** : Création de decks en sélectionnant manuellement les cartes.
-- **Stockage des decks** : Sauvegarde des decks pour les retrouver facilement.
-- **Génération de decks assistée** : Proposition de decks optimisés basés sur une ou plusieurs cartes sélectionnées.
+👉 **Objectifs principaux** :  
+- Développer une application évolutive et intuitive.  
+- Illustrer ma maîtrise des outils modernes de développement (Python, React.js/Vue.js, bases de données relationnelles, API).  
+- Présenter une méthodologie rigoureuse, de la planification à l'exécution.  
 
-#### 3. Intégration de données et API
-- **Base de données des cartes Pokémon** : Intégration des cartes en français avec visuels et statistiques à jour.
-- **Base de données Pokémon (jeux vidéo)** : Accès à des informations détaillées sur chaque Pokémon (caractéristiques, talents, versions chromatiques, etc.).
-- **Mise à jour automatique** : Synchronisation avec des API (comme TCGdex) pour rester à jour.
-- **Scanner de cartes** : Identification d'une carte via un appareil photo.
+## 📂 Structure du dépôt  
 
-#### 4. Autres outils
-- **Création de wishlist** : Répertoire des cartes recherchées.
-- **Album virtuel** : Visualisation des cartes par extension ou thème.
-- **Mode hors ligne** : Gestion de la collection sans connexion.
+Voici un aperçu des fichiers et dossiers qui structurent le projet :  
 
-### Objectifs à venir
-- Intégration d'un mode "draft" pour simuler des créations de decks limités.
-- Gamification avec badges et succès pour motiver l'utilisateur.
-- Gestion des accessoires liés aux cartes (sleeves, classeurs, boîtes).
+### 1. **Planification et conception**  
+- [`projet.md`](./data/docs/projet.md) : Présentation des fonctionnalités principales et des spécifications initiales.  
+- [`plan_execution.md`](./data/docs/plan_execution.md) : Décrit les étapes du projet, les jalons et les objectifs.  
 
-## Structure du projet
-1. **Backend** : Gestion des données et interactions avec les API.
-2. **Frontend** : Interface utilisateur simple et intuitive.
-3. **Base de données** : Inventaire des cartes, decks et Pokémon (jeux vidéo).
 
-## Documentation
+### 2. **Architecture technique**  
+*(En cours de structuration, à compléter au fur et à mesure du développement)*  
+- `backend/` : Contient les fichiers liés à l'API et au backend.  
+- `frontend/` : Structure dédiée à l'interface utilisateur.  
+- `database/` : Scripts et schémas de la base de données.  
 
-- **[1. Plan d'exécution](./data/docs/plan_execution.md)**
-- **[2. Spécifications Fonctionnelles](./data/docs/specifications.md)**
+### 3. **Documentation**  
+- `README.md` (vous lisez ce fichier).  
+- `changelog.md` : Suivi des modifications et évolutions du projet (à venir).  
+- `tests/` : Plans et résultats des tests automatisés (en cours).  
 
-## À propos
-Développé par Jean Paul Van Tongeren dans le cadre d’un projet personnel pour regrouper les informations et optimiser les collections de cartes Pokémon. 😊
+## 🛠️ Technologies prévues  
+
+Le projet utilise (ou utilisera) les technologies suivantes :  
+- **Backend** : Python, Flask/FastAPI.  
+- **Frontend** : React.js ou Vue.js (en cours de décision).  
+- **Base de données** : SQLite/PostgreSQL.  
+- **API** : Intégration de la [PokéAPI](https://pokeapi.co/) et [TCGdex](https://github.com/tcgdex).  
+- **Tests** : Pytest pour le backend, Jest pour le frontend.  
+
+## 🔍 Avancement actuel  
+
+1. **Phase de planification terminée** :  
+   - Plan d'exécution défini.  
+   - Spécifications fonctionnelles amorcées.  
+
+2. **Phase de conception en cours** :  
+   - Structure initiale du projet.  
+   - Réflexion sur le choix des technologies frontend.  
+
+3. **Développement à venir** :  
+   - Création de la base de données.  
+   - Mise en place de l'API backend.  
+   - Développement de l'interface utilisateur.  
+
+## 📖 Sommaire des étapes clés  
+
+1. **Planification** : Définir les objectifs et les spécifications du projet.  
+2. **Conception** : Structurer l'architecture backend, frontend et base de données.  
+3. **Développement backend** :  
+   - Création des endpoints API pour la gestion des collections et des decks.  
+   - Intégration des données externes via des API tierces.  
+4. **Développement frontend** :  
+   - Interface utilisateur pour gérer les cartes et decks.  
+   - Tableau de bord interactif.  
+5. **Tests et validation** : Mise en place de tests unitaires et d'intégration.  
+6. **Documentation et déploiement** : Finalisation des documents techniques et déploiement sur un serveur.  
+
+## 🎯 Objectif final  
+
+Créer une application complète et intuitive qui met en valeur mes compétences techniques, ma passion pour la gestion de projet, et mon souci du détail, tout en illustrant ma capacité à mener un projet de bout en bout.  
+
+---
+
+## 📝 Notes supplémentaires  
+
+Ce projet est en constante évolution. N'hésitez pas à consulter régulièrement le dépôt pour suivre les progrès et les nouvelles fonctionnalités.  
+
+Si vous êtes intéressé(e) par mon travail ou souhaitez en discuter, vous pouvez me contacter via [LinkedIn](https://www.linkedin.com/) ou consulter mon portfolio : [jpvt-data/Portfolio](https://github.com/jpvt-data/Portfolio).  
