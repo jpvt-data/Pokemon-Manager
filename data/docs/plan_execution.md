@@ -56,7 +56,7 @@ Créer une application permettant de :
 ## 3. Chronologie
 
 ### Phase 1 : Planification
-- Créer la structure du projet sur GitHub (terminé).
+~~- Créer la structure du projet sur GitHub (terminé).~~
 - Définir les besoins et les priorités.
 - Valider les outils à utiliser (frameworks, bibliothèques, API).
 
