@@ -1,7 +1,7 @@
 # Spécifications Fonctionnelles du Projet "Pokémon Manager"
 
 ## **Introduction**
-Le projet "Pokémon Manager" vise à fournir une solution intuitive et complète pour les collectionneurs et joueurs de cartes Pokémon.
+Le projet "**Pokémon Manager**" vise à fournir une solution intuitive et complète pour les collectionneurs et joueurs de cartes Pokémon.
 
 L'objectif principal est de permettre une gestion efficace des collections, une optimisation des decks pour le jeu, et une exploration approfondie des données Pokémon.
 
