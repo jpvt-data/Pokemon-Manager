@@ -39,42 +39,6 @@ Ce document détaille les fonctionnalités à développer ainsi que les contrain
 
 ---
 
-### **Cas d'Usage - Interface Utilisateur - Connexion et Gestion du Profil**
-
-#### **3.1 Gestion du Profil Utilisateur**
-**Résumé :**  
-Permettre à l'utilisateur de créer, gérer et modifier son profil, ainsi que de se connecter à l'application pour personnaliser son expérience.
-
-**Acteurs :**  
-- **Utilisateur** : Souhaite gérer son profil et accéder à ses données personnelles.  
-- **Administrateur** : Gère l'authentification et la gestion des comptes utilisateurs.
-
-**Préconditions :**  
-- L'utilisateur dispose d'un compte utilisateur ou peut en créer un.  
-- L'utilisateur est connecté à Internet.  
-
-**Scénario principal :**  
-1. L'utilisateur ouvre l'application et accède à la page de connexion.
-2. L'application propose deux options :  
-   - **Se connecter avec un compte existant** :  
-     a. L'utilisateur entre son nom d'utilisateur et son mot de passe.  
-     b. L'application vérifie les informations et connecte l'utilisateur si les identifiants sont valides.
-   - **Créer un compte** :  
-     a. L'utilisateur saisit son nom, prénom, adresse e-mail et choisit un mot de passe.  
-     b. L'application vérifie que l'adresse e-mail est unique et valide.  
-     c. Un e-mail de confirmation est envoyé pour valider la création du compte.
-3. Une fois connecté, l'utilisateur peut accéder à la page de gestion de son profil :  
-   - Modifier son nom, son adresse e-mail et son mot de passe.  
-   - Ajouter une photo de profil et ajuster ses préférences d'affichage (ex : mode sombre ou clair).
-4. L'utilisateur peut également consulter son historique de connexions et de modifications récentes.
-5. L'utilisateur peut se déconnecter ou supprimer son compte à tout moment.
-
-**Extensions :**  
-- **Réinitialisation du mot de passe** : Permettre à l'utilisateur de réinitialiser son mot de passe en cas d'oubli.  
-- **Authentification via réseaux sociaux** : Ajouter la possibilité de se connecter via des plateformes tierces (Google, Facebook, etc.).  
-
----
-
 ### **MVP - Définition et Fonctionnalités Critiques**
 
 #### **Définition du MVP (Minimum Viable Product)**
