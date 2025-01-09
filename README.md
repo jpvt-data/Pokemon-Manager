@@ -12,6 +12,19 @@ Ce projet me permet de mettre en pratique mes compétences en **développement b
 - Illustrer ma maîtrise des outils modernes de développement (Python, React.js/Vue.js, bases de données relationnelles, API).  
 - Présenter une méthodologie rigoureuse, de la planification à l'exécution.  
 
+## 📖 Sommaire des étapes clés  
+
+1. **Planification** : Définir les objectifs et les spécifications du projet.  
+2. **Conception** : Structurer l'architecture backend, frontend et base de données.  
+3. **Développement backend** :  
+   - Création des endpoints API pour la gestion des collections et des decks.  
+   - Intégration des données externes via des API tierces.  
+4. **Développement frontend** :  
+   - Interface utilisateur pour gérer les cartes et decks.  
+   - Tableau de bord interactif.  
+5. **Tests et validation** : Mise en place de tests unitaires et d'intégration.  
+6. **Documentation et déploiement** : Finalisation des documents techniques et déploiement sur un serveur.
+
 ## 📂 Structure du dépôt  
 
 Voici un aperçu des fichiers et dossiers qui structurent le projet :  
@@ -39,44 +52,4 @@ Le projet utilise (ou utilisera) les technologies suivantes :
 - **Frontend** : React.js ou Vue.js (en cours de décision).  
 - **Base de données** : SQLite/PostgreSQL.  
 - **API** : Intégration de la [PokéAPI](https://pokeapi.co/) et [TCGdex](https://github.com/tcgdex).  
-- **Tests** : Pytest pour le backend, Jest pour le frontend.  
-
-## 🔍 Avancement actuel  
-
-1. **Phase de planification terminée** :  
-   - Plan d'exécution défini.  
-   - Spécifications fonctionnelles amorcées.  
-
-2. **Phase de conception en cours** :  
-   - Structure initiale du projet.  
-   - Réflexion sur le choix des technologies frontend.  
-
-3. **Développement à venir** :  
-   - Création de la base de données.  
-   - Mise en place de l'API backend.  
-   - Développement de l'interface utilisateur.  
-
-## 📖 Sommaire des étapes clés  
-
-1. **Planification** : Définir les objectifs et les spécifications du projet.  
-2. **Conception** : Structurer l'architecture backend, frontend et base de données.  
-3. **Développement backend** :  
-   - Création des endpoints API pour la gestion des collections et des decks.  
-   - Intégration des données externes via des API tierces.  
-4. **Développement frontend** :  
-   - Interface utilisateur pour gérer les cartes et decks.  
-   - Tableau de bord interactif.  
-5. **Tests et validation** : Mise en place de tests unitaires et d'intégration.  
-6. **Documentation et déploiement** : Finalisation des documents techniques et déploiement sur un serveur.  
-
-## 🎯 Objectif final  
-
-Créer une application complète et intuitive qui met en valeur mes compétences techniques, ma passion pour la gestion de projet, et mon souci du détail, tout en illustrant ma capacité à mener un projet de bout en bout.  
-
----
-
-## 📝 Notes supplémentaires  
-
-Ce projet est en constante évolution. N'hésitez pas à consulter régulièrement le dépôt pour suivre les progrès et les nouvelles fonctionnalités.  
-
-Si vous êtes intéressé(e) par mon travail ou souhaitez en discuter, vous pouvez me contacter via [LinkedIn](https://www.linkedin.com/) ou consulter mon portfolio : [jpvt-data/Portfolio](https://github.com/jpvt-data/Portfolio).  
+- **Tests** : Pytest pour le backend, Jest pour le frontend.
