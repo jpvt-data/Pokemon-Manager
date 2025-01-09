@@ -423,22 +423,58 @@ Avec cette interface, collectionneurs et joueurs stratégiques trouveront des ou
 
 ## **Planification des Lots Fonctionnels**
 
-### Lot 1 : Version MVP (Minimum Viable Product)
-- Gestionnaire de collection basique (ajout, suppression, filtrage).
-- Visualisation des cartes avec données minimales.
-- Export CSV.
+### **Lot 1 : Version MVP**
+- **Fonctionnalités :**
+  - Gestionnaire de collection (ajout, suppression, filtrage).
+  - Visualisation des cartes avec des données minimales.
+  - Export CSV.
 
-### Lot 2 : Optimisation des Decks
-- Construction manuelle de decks.
-- Génération automatique avec critères simples.
+- **Évaluation :**
+  - Très pertinent pour un MVP, car il pose les bases techniques nécessaires.
+  - Export CSV est une fonctionnalité pratique et réaliste à ce stade.
 
-### Lot 3 : Améliorations et API
-- Intégration de données via API externe.
-- Simulation de matchs.
+- **Recommandation :**
+  - Préciser les "données minimales" affichées (par exemple : nom, type, rareté, puissance).
+  - Ajouter un test simple pour valider le bon fonctionnement de l’export CSV.
 
-### Lot 4 : Fonctionnalités Communautaires et Gamification
-- Partage de decks.
-- Succès et badges.
+### **Lot 2 : Optimisation des Decks**
+- **Fonctionnalités :**
+  - Construction manuelle de decks.
+  - Génération automatique avec critères simples.
+
+- **Évaluation :**
+  - Ce lot enrichit logiquement le MVP en ajoutant une valeur significative pour les utilisateurs (optimisation des decks).
+  - La génération automatique peut être simplifiée dans un premier temps (par exemple, choisir les cartes les plus puissantes d’un type donné).
+
+- **Recommandation :**
+  - Décrire les "critères simples" pour la génération automatique (types dominants, puissance globale, etc.).
+  - Tester l’interface utilisateur pour la construction manuelle dès la fin du développement.
+
+### **Lot 3 : Améliorations et API**
+- **Fonctionnalités :**
+  - Intégration de données via API externe.
+  - Simulation de matchs.
+
+- **Évaluation :**
+  - L’intégration API est un gros ajout technique mais cohérent avec la roadmap.
+  - La simulation de matchs est une excellente extension fonctionnelle, mais attention à bien la cadrer pour éviter une complexité excessive.
+
+- **Recommandation :**
+  - Prioriser l’API (PokéAPI ou TCGdex) avant d’aborder la simulation de matchs, car ces données enrichiront l'expérience utilisateur.
+  - Prévoir une version minimaliste de la simulation (exemple : calcul automatique du gagnant basé sur la puissance totale des decks).
+
+### **Lot 4 : Fonctionnalités Communautaires et Gamification**
+- **Fonctionnalités :**
+  - Partage de decks.
+  - Succès et badges.
+
+- **Évaluation :**
+  - Ces fonctionnalités ajoutent un vrai engagement utilisateur. 
+  - Ce lot est bien positionné en fin de roadmap, car il s’appuie sur les bases fonctionnelles déjà établies.
+
+- **Recommandation :**
+  - Réfléchir aux formats et canaux de partage des decks (lien URL, export JSON, etc.).
+  - Créer une liste initiale de succès et badges simples pour tester l'intérêt des utilisateurs avant de complexifier.
 
 ---
 
