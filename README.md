@@ -2,7 +2,8 @@
 
 ## 🚀 Présentation du projet  
 
-**Pokémon Manager** est une application web dédiée aux collectionneurs et joueurs de cartes Pokémon.  
+**Pokémon Manager** est une application web dédiée aux collectionneurs et joueurs de cartes Pokémon.
+
 Elle vise à simplifier la gestion des collections, optimiser la création de decks, et fournir des outils intuitifs pour organiser, analyser et enrichir l'expérience des utilisateurs.  
 
 Ce projet me permet de mettre en pratique mes compétences en **développement backend**, **frontend**, **base de données**, et **gestion de projet**, tout en démontrant ma capacité à structurer et documenter un projet complet.  
