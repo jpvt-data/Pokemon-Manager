@@ -1,7 +1,11 @@
 # Spécifications Fonctionnelles du Projet "Pokémon Manager"
 
 ## **Introduction**
-Le projet "Pokémon Manager" vise à fournir une solution intuitive et complète pour les collectionneurs et joueurs de cartes Pokémon. L'objectif principal est de permettre une gestion efficace des collections, une optimisation des decks pour le jeu, et une exploration approfondie des données Pokémon. Ce document détaille les fonctionnalités à développer ainsi que les contraintes et besoins techniques.
+Le projet **Pokémon Manager** vise à fournir une solution intuitive et complète pour les collectionneurs et joueurs de cartes Pokémon.
+
+L'objectif principal est de permettre une gestion efficace des collections, une optimisation des decks pour le jeu, et une exploration approfondie des données Pokémon.
+
+Ce document détaille les fonctionnalités à développer ainsi que les contraintes et besoins techniques.
 
 ---
 
@@ -32,44 +36,6 @@ Le projet "Pokémon Manager" vise à fournir une solution intuitive et complète
 
 3. **Fonctionnalités hors ligne** :
    - Accès à la gestion de la collection sans connexion.
-
-Voici les ajouts demandés pour intégrer la gestion des profils utilisateurs et la définition du MVP dans le fichier **"Spécifications Fonctionnelles.md"** de ton projet "Pokémon Manager" :
-
----
-
-### **Cas d'Usage - Interface Utilisateur - Connexion et Gestion du Profil**
-
-#### **3.1 Gestion du Profil Utilisateur**
-**Résumé :**  
-Permettre à l'utilisateur de créer, gérer et modifier son profil, ainsi que de se connecter à l'application pour personnaliser son expérience.
-
-**Acteurs :**  
-- **Utilisateur** : Souhaite gérer son profil et accéder à ses données personnelles.  
-- **Administrateur** : Gère l'authentification et la gestion des comptes utilisateurs.
-
-**Préconditions :**  
-- L'utilisateur dispose d'un compte utilisateur ou peut en créer un.  
-- L'utilisateur est connecté à Internet.  
-
-**Scénario principal :**  
-1. L'utilisateur ouvre l'application et accède à la page de connexion.
-2. L'application propose deux options :  
-   - **Se connecter avec un compte existant** :  
-     a. L'utilisateur entre son nom d'utilisateur et son mot de passe.  
-     b. L'application vérifie les informations et connecte l'utilisateur si les identifiants sont valides.
-   - **Créer un compte** :  
-     a. L'utilisateur saisit son nom, prénom, adresse e-mail et choisit un mot de passe.  
-     b. L'application vérifie que l'adresse e-mail est unique et valide.  
-     c. Un e-mail de confirmation est envoyé pour valider la création du compte.
-3. Une fois connecté, l'utilisateur peut accéder à la page de gestion de son profil :  
-   - Modifier son nom, son adresse e-mail et son mot de passe.  
-   - Ajouter une photo de profil et ajuster ses préférences d'affichage (ex : mode sombre ou clair).
-4. L'utilisateur peut également consulter son historique de connexions et de modifications récentes.
-5. L'utilisateur peut se déconnecter ou supprimer son compte à tout moment.
-
-**Extensions :**  
-- **Réinitialisation du mot de passe** : Permettre à l'utilisateur de réinitialiser son mot de passe en cas d'oubli.  
-- **Authentification via réseaux sociaux** : Ajouter la possibilité de se connecter via des plateformes tierces (Google, Facebook, etc.).  
 
 ---
 
@@ -457,22 +423,58 @@ Avec cette interface, collectionneurs et joueurs stratégiques trouveront des ou
 
 ## **Planification des Lots Fonctionnels**
 
-### Lot 1 : Version MVP (Minimum Viable Product)
-- Gestionnaire de collection basique (ajout, suppression, filtrage).
-- Visualisation des cartes avec données minimales.
-- Export CSV.
+### **Lot 1 : Version MVP**
+- **Fonctionnalités :**
+  - Gestionnaire de collection (ajout, suppression, filtrage).
+  - Visualisation des cartes avec des données minimales.
+  - Export CSV.
 
-### Lot 2 : Optimisation des Decks
-- Construction manuelle de decks.
-- Génération automatique avec critères simples.
+- **Évaluation :**
+  - Très pertinent pour un MVP, car il pose les bases techniques nécessaires.
+  - Export CSV est une fonctionnalité pratique et réaliste à ce stade.
 
-### Lot 3 : Améliorations et API
-- Intégration de données via API externe.
-- Simulation de matchs.
+- **Recommandation :**
+  - Préciser les "données minimales" affichées (par exemple : nom, type, rareté, puissance).
+  - Ajouter un test simple pour valider le bon fonctionnement de l’export CSV.
 
-### Lot 4 : Fonctionnalités Communautaires et Gamification
-- Partage de decks.
-- Succès et badges.
+### **Lot 2 : Optimisation des Decks**
+- **Fonctionnalités :**
+  - Construction manuelle de decks.
+  - Génération automatique avec critères simples.
+
+- **Évaluation :**
+  - Ce lot enrichit logiquement le MVP en ajoutant une valeur significative pour les utilisateurs (optimisation des decks).
+  - La génération automatique peut être simplifiée dans un premier temps (par exemple, choisir les cartes les plus puissantes d’un type donné).
+
+- **Recommandation :**
+  - Décrire les "critères simples" pour la génération automatique (types dominants, puissance globale, etc.).
+  - Tester l’interface utilisateur pour la construction manuelle dès la fin du développement.
+
+### **Lot 3 : Améliorations et API**
+- **Fonctionnalités :**
+  - Intégration de données via API externe.
+  - Simulation de matchs.
+
+- **Évaluation :**
+  - L’intégration API est un gros ajout technique mais cohérent avec la roadmap.
+  - La simulation de matchs est une excellente extension fonctionnelle, mais attention à bien la cadrer pour éviter une complexité excessive.
+
+- **Recommandation :**
+  - Prioriser l’API (PokéAPI ou TCGdex) avant d’aborder la simulation de matchs, car ces données enrichiront l'expérience utilisateur.
+  - Prévoir une version minimaliste de la simulation (exemple : calcul automatique du gagnant basé sur la puissance totale des decks).
+
+### **Lot 4 : Fonctionnalités Communautaires et Gamification**
+- **Fonctionnalités :**
+  - Partage de decks.
+  - Succès et badges.
+
+- **Évaluation :**
+  - Ces fonctionnalités ajoutent un vrai engagement utilisateur. 
+  - Ce lot est bien positionné en fin de roadmap, car il s’appuie sur les bases fonctionnelles déjà établies.
+
+- **Recommandation :**
+  - Réfléchir aux formats et canaux de partage des decks (lien URL, export JSON, etc.).
+  - Créer une liste initiale de succès et badges simples pour tester l'intérêt des utilisateurs avant de complexifier.
 
 ---
 
