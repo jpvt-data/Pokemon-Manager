@@ -3,7 +3,9 @@
 ## **Introduction**
 Le projet "Pokémon Manager" vise à fournir une solution intuitive et complète pour les collectionneurs et joueurs de cartes Pokémon.
 
-L'objectif principal est de permettre une gestion efficace des collections, une optimisation des decks pour le jeu, et une exploration approfondie des données Pokémon. Ce document détaille les fonctionnalités à développer ainsi que les contraintes et besoins techniques.
+L'objectif principal est de permettre une gestion efficace des collections, une optimisation des decks pour le jeu, et une exploration approfondie des données Pokémon.
+
+Ce document détaille les fonctionnalités à développer ainsi que les contraintes et besoins techniques.
 
 ---
 
