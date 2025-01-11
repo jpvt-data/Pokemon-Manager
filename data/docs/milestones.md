@@ -22,21 +22,41 @@
 **Durée :** 15 Janvier - 11 Février 2025  
 **Responsables :** @boss, @devarch
 
-- [ ] **Analyse des besoins utilisateurs**  
-  *Description :* Comprendre les attentes et les besoins des utilisateurs pour définir les fonctionnalités clés.  
-  *Responsable :* @boss, @devarch
+- **Issue 1: Analyse des besoins utilisateurs**
+  ### Objectif
+  Comprendre les attentes et les besoins des utilisateurs pour définir les fonctionnalités clés de l'application.
+  
+  - [ ] **Collecter les besoins via des enquêtes**
+  - [ ] **Analyser les résultats des enquêtes**
+  - [ ] **Documenter les besoins identifiés**
+  - [ ] **Valider les besoins avec les parties prenantes**
 
-- [ ] **Définition des fonctionnalités principales**  
-  *Description :* Identifier et lister les fonctionnalités essentielles de l'application.  
-  *Responsable :* @boss, @devarch
+- **Issue 2: Définition des fonctionnalités principales**
+  ### Objectif
+  Identifier et lister les fonctionnalités essentielles de l'application pour répondre aux besoins utilisateurs.
+  
+  - [ ] **Lister les fonctionnalités essentielles**
+  - [ ] **Prioriser les fonctionnalités selon leur importance**
+  - [ ] **Décrire les fonctionnalités en détail**
+  - [ ] **Obtenir l'approbation des fonctionnalités définies**
 
-- [ ] **Élaboration du cahier des charges**  
-  *Description :* Rédiger un document détaillé décrivant les spécifications techniques et fonctionnelles.  
-  *Responsable :* @boss, @devarch
+- **Issue 3: Élaboration du cahier des charges**
+  ### Objectif
+  Rédiger un document détaillé décrivant les spécifications techniques et fonctionnelles du projet.
+  
+  - [ ] **Rédiger les spécifications techniques**
+  - [ ] **Inclure les exigences fonctionnelles**
+  - [ ] **Définir les critères de succès**
+  - [ ] **Faire relire et approuver le cahier des charges**
 
-- [ ] **Identification des technologies et outils nécessaires**  
-  *Description :* Sélectionner les technologies backend et frontend adaptées au projet.  
-  *Responsable :* @boss, @devarch
+- **Issue 4: Identification des technologies et outils nécessaires**
+  ### Objectif
+  Sélectionner les technologies backend et frontend adaptées ainsi que les outils de gestion de projet.
+  
+  - [ ] **Rechercher les technologies backend appropriées**
+  - [ ] **Rechercher les technologies frontend adaptées**
+  - [ ] **Sélectionner les outils de gestion de projet**
+  - [ ] **Finaliser la liste des technologies et outils à utiliser**
 
 ---
 
@@ -45,17 +65,32 @@
 **Durée :** 12 Février - 25 Mars 2025  
 **Responsable :** @crea
 
-- [ ] **Création des maquettes initiales**  
-  *Description :* Concevoir les premières maquettes de l'interface utilisateur.  
-  *Responsable :* @crea
+- **Issue 1: Création des maquettes initiales**
+  ### Objectif
+  Concevoir les premières maquettes de l'interface utilisateur pour visualiser l'apparence et la navigation de l'application.
+  
+  - [ ] **Esquisser les premières idées de design**
+  - [ ] **Développer des maquettes haute-fidélité**
+  - [ ] **Présenter les maquettes aux parties prenantes**
+  - [ ] **Recueillir les premiers retours**
 
-- [ ] **Révision et feedback sur les maquettes**  
-  *Description :* Recueillir et intégrer les retours sur les maquettes proposées.  
-  *Responsable :* @crea, @boss
+- **Issue 2: Révision et feedback sur les maquettes**
+  ### Objectif
+  Recueillir et intégrer les retours sur les maquettes proposées pour améliorer le design avant la finalisation.
+  
+  - [ ] **Analyser les retours reçus**
+  - [ ] **Apporter les modifications nécessaires aux maquettes**
+  - [ ] **Organiser une session de feedback supplémentaire si nécessaire**
+  - [ ] **Finaliser les maquettes révisées**
 
-- [ ] **Finalisation de la charte graphique et des prototypes**  
-  *Description :* Finaliser le design visuel et créer des prototypes interactifs.  
-  *Responsable :* @crea
+- **Issue 3: Finalisation de la charte graphique et des prototypes**
+  ### Objectif
+  Finaliser le design visuel et créer des prototypes interactifs qui guideront le développement frontend.
+  
+  - [ ] **Définir les couleurs, typographies et styles**
+  - [ ] **Créer un guide de style détaillé**
+  - [ ] **Développer des prototypes interactifs**
+  - [ ] **Valider la charte graphique avec l'équipe**
 
 ---
 
@@ -64,17 +99,32 @@
 **Durée :** 26 Mars - 17 Juin 2025  
 **Responsables :** @devfront, @devarch
 
-- [ ] **Mise en place de l'architecture backend**  
-  *Description :* Développer l'architecture serveur et configurer la base de données.  
-  *Responsable :* @devarch
+- **Issue 1: Mise en place de l'architecture backend**
+  ### Objectif
+  Développer l'architecture serveur et configurer la base de données pour supporter les fonctionnalités principales de l'application.
+  
+  - [ ] **Configurer le serveur et l'environnement de développement**
+  - [ ] **Développer la structure de la base de données**
+  - [ ] **Implémenter les API nécessaires**
+  - [ ] **Tester les endpoints backend**
 
-- [ ] **Développement des fonctionnalités principales frontend**  
-  *Description :* Implémenter les principales fonctionnalités côté client.  
-  *Responsable :* @devfront
+- **Issue 2: Développement des fonctionnalités principales frontend**
+  ### Objectif
+  Implémenter les principales fonctionnalités côté client pour offrir une expérience utilisateur fluide et intuitive.
+  
+  - [ ] **Configurer le framework frontend choisi**
+  - [ ] **Développer les composants de base**
+  - [ ] **Intégrer les maquettes UI/UX**
+  - [ ] **Assurer la réactivité de l'interface**
 
-- [ ] **Intégration frontend-backend et premières implémentations**  
-  *Description :* Connecter le frontend avec le backend et intégrer les premières fonctionnalités.  
-  *Responsable :* @devfront, @devarch
+- **Issue 3: Intégration frontend-backend et premières implémentations**
+  ### Objectif
+  Connecter le frontend avec le backend et intégrer les premières fonctionnalités pour une application fonctionnelle de base.
+  
+  - [ ] **Connecter le frontend avec les API backend**
+  - [ ] **Tester l'intégration des fonctionnalités**
+  - [ ] **Corriger les bugs d'intégration**
+  - [ ] **Valider les premières implémentations avec l'équipe**
 
 ---
 
@@ -83,13 +133,23 @@
 **Durée :** 18 Juin - 12 Août 2025  
 **Responsables :** @devfront, @devarch
 
-- [ ] **Tests unitaires et d'intégration**  
-  *Description :* Effectuer des tests pour garantir la qualité et la fiabilité du code.  
-  *Responsable :* @devfront, @devarch
+- **Issue 1: Tests unitaires et d'intégration**
+  ### Objectif
+  Assurer la qualité et la fiabilité du code en effectuant des tests unitaires et d'intégration sur l'ensemble de l'application.
+  
+  - [ ] **Écrire des tests unitaires pour le backend**
+  - [ ] **Écrire des tests unitaires pour le frontend**
+  - [ ] **Développer des tests d'intégration**
+  - [ ] **Exécuter les tests et analyser les résultats**
 
-- [ ] **Correction des bugs identifiés et améliorations fonctionnelles**  
-  *Description :* Résoudre les bugs détectés et améliorer les fonctionnalités existantes.  
-  *Responsable :* @devfront, @devarch
+- **Issue 2: Correction des bugs identifiés et améliorations fonctionnelles**
+  ### Objectif
+  Résoudre les bugs détectés lors des tests et améliorer les fonctionnalités existantes pour optimiser l'application.
+  
+  - [ ] **Lister tous les bugs identifiés**
+  - [ ] **Prioriser les bugs selon leur sévérité**
+  - [ ] **Corriger les bugs critiques**
+  - [ ] **Améliorer les fonctionnalités existantes**
 
 ---
 
@@ -98,13 +158,23 @@
 **Durée :** 13 Août - 23 Septembre 2025  
 **Responsables :** @devfront, @devarch
 
-- [ ] **Optimisation des performances backend et frontend**  
-  *Description :* Améliorer les performances de l'application pour une meilleure expérience utilisateur.  
-  *Responsable :* @devfront, @devarch
+- **Issue 1: Optimisation des performances backend et frontend**
+  ### Objectif
+  Améliorer les performances de l'application pour offrir une expérience utilisateur rapide et fluide.
+  
+  - [ ] **Analyser les performances actuelles**
+  - [ ] **Optimiser les requêtes de la base de données**
+  - [ ] **Améliorer le temps de chargement des pages**
+  - [ ] **Mettre en œuvre des techniques de mise en cache**
 
-- [ ] **Ajout de fonctionnalités supplémentaires et améliorations UI/UX**  
-  *Description :* Introduire de nouvelles fonctionnalités et peaufiner le design utilisateur.  
-  *Responsable :* @devfront, @devarch
+- **Issue 2: Ajout de fonctionnalités supplémentaires et améliorations UI/UX**
+  ### Objectif
+  Introduire de nouvelles fonctionnalités et peaufiner le design utilisateur basé sur les retours et les besoins identifiés.
+  
+  - [ ] **Identifier les fonctionnalités supplémentaires à ajouter**
+  - [ ] **Développer et intégrer les nouvelles fonctionnalités**
+  - [ ] **Améliorer l'interface utilisateur basée sur les retours**
+  - [ ] **Valider les améliorations avec l'équipe**
 
 ---
 
@@ -113,13 +183,23 @@
 **Durée :** 24 Septembre - 21 Octobre 2025  
 **Responsable :** @carcom
 
-- [ ] **Création des supports de communication**  
-  *Description :* Développer les supports marketing et de communication pour le lancement.  
-  *Responsable :* @carcom
+- **Issue 1: Création des supports de communication**
+  ### Objectif
+  Développer les supports marketing et de communication nécessaires pour promouvoir le lancement de l'application.
+  
+  - [ ] **Développer des brochures et des présentations**
+  - [ ] **Créer des vidéos de démonstration**
+  - [ ] **Préparer des documents de presse**
+  - [ ] **Mettre à jour le site web avec les informations de lancement**
 
-- [ ] **Planification des campagnes marketing et de communication**  
-  *Description :* Élaborer des stratégies pour promouvoir le lancement de l'application.  
-  *Responsable :* @carcom
+- **Issue 2: Planification des campagnes marketing et de communication**
+  ### Objectif
+  Élaborer des stratégies efficaces pour promouvoir le lancement de l'application et attirer des utilisateurs.
+  
+  - [ ] **Définir les objectifs des campagnes**
+  - [ ] **Créer un calendrier des campagnes marketing**
+  - [ ] **Développer du contenu pour les réseaux sociaux**
+  - [ ] **Planifier des événements de promotion**
 
 ---
 
@@ -128,13 +208,23 @@
 **Durée :** 22 Octobre - 18 Novembre 2025  
 **Responsable :** @carcom
 
-- [ ] **Déploiement de la version alpha**  
-  *Description :* Lancer une version préliminaire de l'application pour un groupe restreint d'utilisateurs.  
-  *Responsable :* @carcom
+- **Issue 1: Déploiement de la version alpha**
+  ### Objectif
+  Lancer une version préliminaire de l'application pour un groupe restreint d'utilisateurs afin de recueillir des retours initiaux.
+  
+  - [ ] **Préparer l'environnement de déploiement**
+  - [ ] **Déployer la version alpha sur les serveurs**
+  - [ ] **Assurer la disponibilité de l'application pour les utilisateurs alpha**
+  - [ ] **Monitorer les performances et la stabilité**
 
-- [ ] **Collecte des retours utilisateurs**  
-  *Description :* Recueillir et analyser les feedbacks des utilisateurs alpha pour les améliorations futures.  
-  *Responsable :* @carcom
+- **Issue 2: Collecte des retours utilisateurs**
+  ### Objectif
+  Recueillir et analyser les feedbacks des utilisateurs alpha pour identifier les points d'amélioration.
+  
+  - [ ] **Créer des formulaires de feedback**
+  - [ ] **Analyser les retours des utilisateurs alpha**
+  - [ ] **Identifier les points d'amélioration**
+  - [ ] **Communiquer les résultats à l'équipe de développement**
 
 ---
 
@@ -143,13 +233,23 @@
 **Durée :** 19 Novembre - 16 Décembre 2025  
 **Responsables :** @devfront, @devarch
 
-- [ ] **Analyse des feedbacks et identification des améliorations**  
-  *Description :* Examiner les retours utilisateurs et déterminer les améliorations à apporter.  
-  *Responsable :* @devfront, @devarch
+- **Issue 1: Analyse des feedbacks et identification des améliorations**
+  ### Objectif
+  Examiner les retours des utilisateurs pour déterminer les améliorations nécessaires et planifier les itérations futures.
+  
+  - [ ] **Recueillir tous les feedbacks des utilisateurs**
+  - [ ] **Prioriser les améliorations à apporter**
+  - [ ] **Définir un plan d'action pour les itérations**
+  - [ ] **Documenter les changements nécessaires**
 
-- [ ] **Implémentation des améliorations et corrections finales**  
-  *Description :* Apporter les modifications nécessaires pour optimiser l'application avant le lancement final.  
-  *Responsable :* @devfront, @devarch
+- **Issue 2: Implémentation des améliorations et corrections finales**
+  ### Objectif
+  Apporter les modifications identifiées pour optimiser l'application avant le lancement final.
+  
+  - [ ] **Développer les améliorations identifiées**
+  - [ ] **Tester les nouvelles fonctionnalités**
+  - [ ] **Corriger les bugs restants**
+  - [ ] **Préparer la version finale pour le lancement**
 
 ---
 
@@ -158,13 +258,23 @@
 **Durée :** 17 Décembre - 25 Décembre 2025  
 **Responsable :** @carcom
 
-- [ ] **Préparation et exécution du lancement final**  
-  *Description :* Organiser et exécuter le lancement officiel de l'application.  
-  *Responsable :* @carcom
+- **Issue 1: Préparation et exécution du lancement final**
+  ### Objectif
+  Organiser et exécuter le lancement officiel de l'application pour une adoption large par les utilisateurs.
+  
+  - [ ] **Finaliser le déploiement de la version finale**
+  - [ ] **Vérifier la stabilité et les performances**
+  - [ ] **Organiser un événement de lancement**
+  - [ ] **Assurer la disponibilité de l'application pour tous les utilisateurs**
 
-- [ ] **Promotion et communication intensive**  
-  *Description :* Intensifier les efforts de communication pour assurer une large adoption de l'application.  
-  *Responsable :* @carcom
+- **Issue 2: Promotion et communication intensive**
+  ### Objectif
+  Intensifier les efforts de communication pour assurer une large adoption et un succès du lancement de l'application.
+  
+  - [ ] **Lancer les campagnes marketing planifiées**
+  - [ ] **Publier des articles de presse et des posts sur les réseaux sociaux**
+  - [ ] **Interagir avec la communauté pour encourager l'adoption**
+  - [ ] **Surveiller et répondre aux retours des utilisateurs**
 
 ---
 
@@ -177,4 +287,3 @@
 ---
 
 *Document généré par ChatGPT avec les contributions de @boss et @devfront.*
-
