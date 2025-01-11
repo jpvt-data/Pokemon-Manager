@@ -189,7 +189,3 @@ La communication autour du projet est essentielle pour attirer des utilisateurs 
 ## Conclusion
 
 En suivant ce plan de projet structuré et en intégrant les recommandations de chaque assistant virtuel, **Pokemon Manager** est bien positionné pour réussir. La collaboration efficace, la gestion rigoureuse des tâches et une communication claire seront essentielles pour atteindre les objectifs fixés.
-
----
-
-*Document généré par ChatGPT avec les contributions de @boss, @devarch, @devfront et @carcom.*
