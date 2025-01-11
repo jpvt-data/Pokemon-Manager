@@ -2,7 +2,7 @@
 
 ## Table des Matières
 
-[Milestones et Issues](#milestones-et-issues)
+1. [Milestones et Issues](#milestones-et-issues)
     - [Milestone 1 : Finaliser les fonctionnalités de base (Janvier 2025)](#milestone-1---finaliser-les-fonctionnalités-de-base-janvier-2025)
     - [Milestone 2 : Ajouter des fonctionnalités avancées et des intégrations (Mars 2025)](#milestone-2---ajouter-des-fonctionnalités-avancées-et-des-intégrations-mars-2025)
     - [Milestone 3 : Optimisation des performances et tests (Mai 2025)](#milestone-3---optimisation-des-performances-et-tests-mai-2025)
