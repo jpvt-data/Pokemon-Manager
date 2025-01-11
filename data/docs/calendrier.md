@@ -15,8 +15,6 @@
 ### Milestone 1 : Finaliser les fonctionnalités de base (Janvier 2025)
 
 **Durée :** 01 Janvier - 31 Janvier 2025  
-**Responsable :** @boss
-
 - **Issue 1.1 : Développement de la gestion des collections**
   
   ### Objectif
@@ -40,7 +38,6 @@
 ### Milestone 2 : Ajouter des fonctionnalités avancées et des intégrations (Mars 2025)
 
 **Durée :** 01 Février - 31 Mars 2025  
-**Responsable :** @boss
 
 - **Issue 2.1 : Intégration de la PokéAPI**
   
@@ -71,7 +68,6 @@
 ### Milestone 3 : Optimisation des performances et tests (Mai 2025)
 
 **Durée :** 01 Avril - 31 Mai 2025  
-**Responsable :** @boss
 
 - **Issue 3.1 : Optimisation backend**
   
@@ -103,7 +99,6 @@
 ### Milestone 4 : Lancement et marketing (Juillet 2025)
 
 **Durée :** 01 Juin - 31 Juillet 2025  
-**Responsable :** @boss
 
 - **Issue 4.1 : Déploiement en production**
   
