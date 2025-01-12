@@ -33,7 +33,7 @@ Voici un aperçu des fichiers et dossiers qui structurent le projet :
 ### 1. **Planification et conception**  
 - [`projet.md`](./data/docs/projet.md) : Présentation des fonctionnalités principales et des spécifications initiales.  
 - [`plan_execution.md`](./data/docs/plan_execution.md) : Décrit les étapes du projet, les jalons et les objectifs.
-- [`specifications_fonctionnelles.md`](./data/docs/specifications_fonctionnelles.md) : Description précise des fonctionnalités.  
+- [`specifications_fonctionnelles.md`](./data/docs/specifications.md) : Description précise des fonctionnalités.  
 
 ### 2. **Architecture technique**  
 *En cours de structuration*    
