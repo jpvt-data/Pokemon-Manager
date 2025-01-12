@@ -20,11 +20,11 @@
 ## 📂 Structure du dépôt
 Le dépôt est organisé de manière à garantir une navigation simple et une compréhension rapide du projet.
 
-- [📘 README.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/README.md) : Aperçu du projet.
 - [📄 projet.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/projet.md) : Objectifs détaillés et vision globale.
 - [📝 plan_execution.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/plan_execution.md) : Étapes et plan d'action pour le développement.
 - [⚙️ specifications.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/specifications.md) : Détails techniques et exigences fonctionnelles.
 - Dossiers :
+  - [📘 documentation/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/documentation) : 
   - [📂 data/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/data) : Données brutes et pré-traitées.
   - [📓 notebooks/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/notebooks) : Analyses exploratoires et tests de modèles.
   - [💻 src/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/src) : Code source de l'application.
