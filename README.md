@@ -5,11 +5,12 @@
 
 ## Table des matières
 1. [Objectifs du projet](#-objectifs-du-projet)
-2. [Structure du dépôt](#-structure-du-dépôt)
-3. [Instructions pour collaborer](#instructions-pour-collaborer)
-4. [État actuel](#etat-actuel)
-5. [Prochaines étapes](#prochaines-étapes)
-6. [Contact](#-contact)
+2. [Cas d'usage](#-cas-dusage)
+3. [Structure du dépôt](#-structure-du-dépôt)
+4. [Instructions pour collaborer](#instructions-pour-collaborer)
+5. [État actuel](#etat-actuel)
+6. [Prochaines étapes](#prochaines-étapes)
+7. [Contact](#-contact)
 
 ## 🎯 Objectifs du projet
 - **Gestion de collection** : Créer un système permettant aux utilisateurs de cataloguer leurs cartes Pokémon, suivre les cartes manquantes, et gérer leur progression.
@@ -17,10 +18,27 @@
 - **Analyse des données** : Offrir des visualisations statistiques sur la rareté des cartes, leur valeur marchande et leurs performances.
 - **Exploration stratégique** : Permettre aux joueurs d’évaluer des scénarios de jeu et d’améliorer leurs stratégies en fonction des données disponibles.
 
+## ✨ Cas d’usage
+
+### Gestion de collection
+- Un utilisateur ajoute ses cartes Pokémon à la plateforme en indiquant leurs caractéristiques (nom, type, rareté, état). 
+- La plateforme identifie les cartes manquantes pour compléter une série et propose des recommandations personnalisées.
+
+### Optimisation de decks
+- Un joueur crée un deck en sélectionnant des cartes de sa collection.
+- L’outil d’analyse lui suggère des améliorations basées sur la synergie des cartes et les faiblesses potentielles.
+
+### Analyse des données
+- L’utilisateur consulte des graphiques montrant la distribution de ses cartes (par type, rareté, ou série).
+- Un tableau de bord interactif affiche la valeur estimée de la collection en fonction des tendances marchandes.
+
+### Exploration stratégique
+- Le joueur simule un match contre un deck prédéfini ou personnalisé.
+- La plateforme évalue les forces et faiblesses des deux decks et propose des ajustements stratégiques.
+  
 ## 📂 Structure du dépôt
 Le dépôt est organisé de manière à garantir une navigation simple et une compréhension rapide du projet.
 
-- [📄 projet.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/documentation/projet.md) : Objectifs détaillés et vision globale.
 - [📝 plan_execution.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/documentation/plan_execution.md) : Étapes et plan d'action pour le développement.
 - [⚙️ specifications.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/documentation/specifications.md) : Détails techniques et exigences fonctionnelles.
 - Dossiers :
@@ -38,7 +56,7 @@ Le dépôt est organisé de manière à garantir une navigation simple et une co
    ```bash
    pip install -r requirements.txt
    ```
-3. Lisez les fichiers [projet.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/projet.md) et [plan_execution.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/plan_execution.md) pour comprendre les prochaines étapes.
+3. Lisez les fichiers [plan_execution.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/documentation/plan_execution.md) et [specifications.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/documentation/specifications.md) pour comprendre les prochaines étapes.
 
 ## Etat actuel
 - **📌 Phase actuelle** : Démarrage
