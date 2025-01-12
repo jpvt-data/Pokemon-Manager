@@ -1,104 +1,55 @@
-# Pokémon Manager  
+# Projet Pokemon Manager
 
-## 🚀 Présentation du projet  
+## Introduction
+🎮 **Pokemon Manager** est un projet visant à créer une plateforme complète pour la gestion des collections de cartes Pokémon. Ce projet a pour but d'aider les collectionneurs à optimiser leurs decks, analyser leurs collections, et explorer les stratégies d’optimisation pour les jeux de cartes Pokémon (JCC). Il s'inscrit dans une démarche pédagogique et professionnelle, tout en offrant une expérience ludique et pratique.
 
-**Pokémon Manager** est une application web dédiée aux collectionneurs et joueurs de cartes Pokémon.
+## Table des matières
+1. [Objectifs du projet](#-objectifs-du-projet)
+2. [Structure du dépôt](#-structure-du-dépôt)
+3. [Instructions pour collaborer](#instructions-pour-collaborer)
+4. [État actuel](#etat-actuel)
+5. [Prochaines étapes](#prochaines-étapes)
+6. [Contact](#-contact)
 
-Elle vise à simplifier la gestion des collections, optimiser la création de decks, et fournir des outils intuitifs pour organiser, analyser et enrichir l'expérience des utilisateurs.  
+## 🎯 Objectifs du projet
+- **Gestion de collection** : Créer un système permettant aux utilisateurs de cataloguer leurs cartes Pokémon, suivre les cartes manquantes, et gérer leur progression.
+- **Optimisation de decks** : Proposer des outils d'analyse pour optimiser les combinaisons de cartes en fonction des stratégies de jeu.
+- **Analyse des données** : Offrir des visualisations statistiques sur la rareté des cartes, leur valeur marchande et leurs performances.
+- **Exploration stratégique** : Permettre aux joueurs d’évaluer des scénarios de jeu et d’améliorer leurs stratégies en fonction des données disponibles.
 
-Ce projet "perso" me permet de développer mes compétences **backend**, **frontend**, **base de données**, et **gestion de projet**, dans une univers ludique qui me passionne :)
+## 📂 Structure du dépôt
+Le dépôt est organisé de manière à garantir une navigation simple et une compréhension rapide du projet.
 
-👉 **Objectifs principaux** :  
-- Développer une application évolutive et intuitive.  
-- Améliorer mes compétences dans l'utilisation des outils de développement (Python, React.js/Vue.js, bases de données relationnelles, API)   
-- Présenter une méthodologie rigoureuse, de la planification à l'exécution.  
+- [📘 README.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/README.md) : Aperçu du projet.
+- [📄 projet.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/projet.md) : Objectifs détaillés et vision globale.
+- [📝 plan_execution.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/plan_execution.md) : Étapes et plan d'action pour le développement.
+- [⚙️ specifications.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/specifications.md) : Détails techniques et exigences fonctionnelles.
+- Dossiers :
+  - [📂 data/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/data) : Données brutes et pré-traitées.
+  - [📓 notebooks/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/notebooks) : Analyses exploratoires et tests de modèles.
+  - [💻 src/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/src) : Code source de l'application.
 
-## 📖 Sommaire des étapes clés  
+## Instructions pour collaborer
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/jpvt-data/Pokemon-Manager.git
+   ```
+2. Installez les dépendances :
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Lisez les fichiers [projet.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/projet.md) et [plan_execution.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/plan_execution.md) pour comprendre les prochaines étapes.
 
-1. **Planification** : Définir les objectifs et les spécifications du projet.  
-2. **Conception** : Structurer l'architecture backend, frontend et base de données.  
-3. **Développement backend** :  
-   - Création des endpoints API pour la gestion des collections et des decks.  
-   - Intégration des données externes via des API tierces.  
-4. **Développement frontend** :  
-   - Interface utilisateur pour gérer les cartes et decks.  
-   - Tableau de bord interactif.  
-5. **Tests et validation** : Mise en place de tests unitaires et d'intégration.  
-6. **Documentation et déploiement** : Finalisation des documents techniques et déploiement sur un serveur.
+## Etat actuel
+- **📌 Phase actuelle** : Démarrage
+  - Organisation initiale du dépôt terminée.
+  - Analyse préliminaire des besoins en données.
 
-## 📂 Structure du dépôt  
+## Prochaines étapes
+- ✅ Valider la structure des fichiers et garantir leur cohérence.
+- 🛠 Développer une première version de la base de données pour la gestion de collection.
+- 📊 Implémenter des visualisations de base pour tester les analyses.
 
-Voici un aperçu des fichiers et dossiers qui structurent le projet :  
+## 📬 Contact
+Si vous souhaitez en savoir plus sur le projet ou collaborer, contactez-moi via [mon portfolio GitHub](https://github.com/jpvt-data/Portfolio).
 
-### 1. **Planification et conception**  
-- [`projet.md`](./data/docs/projet.md) : Présentation des fonctionnalités principales et des spécifications initiales.  
-- [`plan_execution.md`](./data/docs/plan_execution.md) : Décrit les étapes du projet, les jalons et les objectifs.
-- [`specifications_fonctionnelles.md`](./data/docs/specifications.md) : Description précise des fonctionnalités.  
-
-### 2. **Architecture technique**  
-*En cours de structuration*    
-
-### 3. **Documentation**
-*A venir*
-
-## 🛠️ Technologies prévues  
-
-Le projet utilise (ou utilisera) les technologies suivantes :  
-- **Backend** : Python, Flask/FastAPI.  
-- **Frontend** : React.js ou Vue.js (en cours de décision).  
-- **Base de données** : SQLite/PostgreSQL.  
-- **API** : *Recherche d'API en cours* 
-- **Tests** : Pytest pour le backend, Jest pour le frontend.
-
-## 📦 Installation et Configuration
-*A venir*
-### Prérequis
-- **Python 3.8+**
-- **Node.js 14+**
-- **PostgreSQL** (ou SQLite pour le développement local)
-
-### Installation Backend
-*A venir*
-
-### Installation Frontend
-*A venir*
-
-## 📖 Utilisation
-
-### Accéder à l'application
-*A venir*
-
-### Fonctionnalités principales
-- **Gestion des Collections :** Ajoutez, modifiez et supprimez des cartes Pokémon de votre collection.
-- **Création de Decks :** Créez et organisez vos decks en fonction de vos stratégies de jeu.
-- **Tableau de Bord :** Visualisez des statistiques et des analyses de votre collection et de vos decks.
-
-### Exemple de Gestion des Collections
-*A venir*
-
-## 🧪 Tests
-
-### Exécution des Tests Backend
-*A venir*
-
-### Exécution des Tests Frontend
-*A venir
-
-## 🚀 Déploiement
-
-### Déploiement Local
-*A venir*
-
-### Déploiement en Production
-*A venir*
-
-## 📜 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus d'informations.
-
-## 🛤️ Roadmap
-
-- [ ] **Phase 1 :** Finaliser les fonctionnalités de base (Printemps 2025)
-- [ ] **Phase 2 :** Ajouter des fonctionnalités avancées et des intégrations (Ete 2025)
-- [ ] **Phase 3 :** Optimisation des performances et tests (Automne 2025)
-- [ ] **Phase 4 :** Lancement et marketing (Hiver 2025)
