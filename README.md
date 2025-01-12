@@ -66,7 +66,7 @@ Le projet utilise (ou utilisera) les technologies suivantes :
 ## 📖 Utilisation
 
 ### Accéder à l'application
-Une fois le backend et le frontend lancés, ouvrez votre navigateur et allez à [http://localhost:3000](http://localhost:3000).
+*A venir*
 
 ### Fonctionnalités principales
 - **Gestion des Collections :** Ajoutez, modifiez et supprimez des cartes Pokémon de votre collection.
