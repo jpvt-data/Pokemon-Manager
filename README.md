@@ -1,4 +1,4 @@
-# Projet Pokemon Manager
+# Pokemon Manager
 
 ## Introduction
 🎮 **Pokemon Manager** est un projet visant à créer une plateforme complète pour la gestion des collections de cartes Pokémon. Ce projet a pour but d'aider les collectionneurs à optimiser leurs decks, analyser leurs collections, et explorer les stratégies d’optimisation pour les jeux de cartes Pokémon (JCC). Il s'inscrit dans une démarche pédagogique et professionnelle, tout en offrant une expérience ludique et pratique.
