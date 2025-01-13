@@ -18,23 +18,22 @@
 - **Analyse des données** : Offrir des visualisations statistiques sur la rareté des cartes, leur valeur marchande et leurs performances.
 - **Exploration stratégique** : Permettre aux joueurs d’évaluer des scénarios de jeu et d’améliorer leurs stratégies en fonction des données disponibles.
 
-## ✨ Cas d’usage
+## ✨ Principaux Cas d’usage
 
-### Gestion de collection
-- Un utilisateur ajoute ses cartes Pokémon à la plateforme en indiquant leurs caractéristiques (nom, type, rareté, état). 
-- La plateforme identifie les cartes manquantes pour compléter une série et propose des recommandations personnalisées.
+1. **Gestionnaire de collection** : Ajouter, modifier et rechercher des cartes.
+   - Suivi et organisation des cartes physiques.
+   - Import/export des collections au format CSV ou Excel.
 
-### Optimisation de decks
-- Un joueur crée un deck en sélectionnant des cartes de sa collection.
-- L’outil d’analyse lui suggère des améliorations basées sur la synergie des cartes et les faiblesses potentielles.
+2. **Optimisation de decks** : Construire, stocker et simuler des decks.
+   - Génération automatique basée sur des critères (type, synergie, etc.).
+   - Simulation de matchs.
 
-### Analyse des données
-- L’utilisateur consulte des graphiques montrant la distribution de ses cartes (par type, rareté, ou série).
-- Un tableau de bord interactif affiche la valeur estimée de la collection en fonction des tendances marchandes.
+3. **Base de données Pokémon** : Accéder aux données des Pokémon des jeux vidéo et des cartes.
+   - Intégration des cartes Pokémon avec leurs détails.
+   - Informations croisées sur les cartes et les Pokémon.
 
-### Exploration stratégique
-- Le joueur simule un match contre un deck prédéfini ou personnalisé.
-- La plateforme évalue les forces et faiblesses des deux decks et propose des ajustements stratégiques.
+4. **Interface intuitive** : Priorité à la simplicité et à l'ergonomie.
+   - Design adapté à la fois aux collectionneurs et aux joueurs stratégiques.
   
 ## 📂 Structure du dépôt
 Le dépôt est organisé de manière à garantir une navigation simple et une compréhension rapide du projet.
