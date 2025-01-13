@@ -18,8 +18,9 @@
 - **Analyse des données** : Offrir des visualisations statistiques sur la rareté des cartes, leur valeur marchande et leurs performances.
 - **Exploration stratégique** : Permettre aux joueurs d’évaluer des scénarios de jeu et d’améliorer leurs stratégies en fonction des données disponibles.
 
-## ✨ Principaux Cas d’usage
+## ✨ Cas d’usage
 
+### Principaux Cas d'Usage
 1. **Gestionnaire de collection** : Ajouter, modifier et rechercher des cartes.
    - Suivi et organisation des cartes physiques.
    - Import/export des collections au format CSV ou Excel.
@@ -34,6 +35,16 @@
 
 4. **Interface intuitive** : Priorité à la simplicité et à l'ergonomie.
    - Design adapté à la fois aux collectionneurs et aux joueurs stratégiques.
+  
+### Usages Secondaires :
+1. **Partage communautaire** :
+   - Comparaison de decks et échanges de cartes.
+
+2. **Gamification** :
+   - Succès et badges pour inciter à l’utilisation.
+
+3. **Fonctionnalités hors ligne** :
+   - Accès à la gestion de la collection sans connexion.
   
 ## 📂 Structure du dépôt
 Le dépôt est organisé de manière à garantir une navigation simple et une compréhension rapide du projet.
