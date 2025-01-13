@@ -20,7 +20,7 @@
 
 ## ✨ Cas d’usage
 
-### Principaux Cas d'Usage
+### Principaux Cas d'Usage :
 1. **Gestionnaire de collection** : Ajouter, modifier et rechercher des cartes.
    - Suivi et organisation des cartes physiques.
    - Import/export des collections au format CSV ou Excel.
