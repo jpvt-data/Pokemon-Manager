@@ -53,7 +53,7 @@ Le dépôt est organisé de manière à garantir une navigation simple et une co
 - ⚙️ [specifications.md](https://github.com/jpvt-data/Pokemon-Manager/blob/main/documentation/specifications.md) : Détails techniques et exigences fonctionnelles.
 - Dossiers :
   - 📘 [documentation/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/documentation/README.md) : Guides et ressources pour comprendre et utiliser le projet.
-  - 📂 [data/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/data/README.md)) : Données brutes et pré-traitées.
+  - 📂 [data/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/data/README.md) : Données brutes et pré-traitées.
   - 📓 [notebooks/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/notebooks/README.md) : Analyses exploratoires et tests de modèles.
   - 💻 [src/](https://github.com/jpvt-data/Pokemon-Manager/tree/main/src/README.md) : Code source de l'application.
 
