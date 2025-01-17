@@ -367,4 +367,3 @@ Le présent document pose les **bases** du projet Pokémon Manager et détaille 
 - L’**architecture technique** de référence pour bâtir un système robuste, extensible et maintenable.  
 
 Ce document constitue ainsi un **socle solide** : le MVP devra être réalisé en priorité, tandis que les fonctionnalités additionnelles et les pistes de monétisation pourront être intégrées de manière itérative en fonction des retours utilisateurs, de l’évolution du marché et de la stratégie globale du projet.
-```
