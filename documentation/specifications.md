@@ -1,492 +1,282 @@
 # Spécifications Fonctionnelles du Projet "Pokémon Manager"
 
-## **Introduction**
-Le projet **Pokémon Manager** vise à fournir une solution intuitive et complète pour les collectionneurs et joueurs de cartes Pokémon.
+## 1. **Introduction**
+Le projet **Pokémon Manager** a pour vocation de proposer une plateforme permettant aux collectionneurs et aux joueurs de cartes Pokémon de gérer efficacement leur collection et de créer des decks pour optimiser leur expérience de jeu.  
 
-L'objectif principal est de permettre une gestion efficace des collections, une optimisation des decks pour le jeu, et une exploration approfondie des données Pokémon.
-
-Ce document détaille les fonctionnalités à développer ainsi que les contraintes et besoins techniques.
+Ce document constitue la **base** des spécifications du projet, en décrivant à la fois le périmètre **MVP (Minimum Viable Product)** et les fonctionnalités **évolutives** prévues par la suite. Les sections qui suivent clarifient les objectifs, les cas d’usage, les contraintes techniques et l’interface utilisateur cible.
 
 ---
 
-## **Objectifs du Projet**
+## 2. **Objectifs du Projet**
 
-### Principaux Objectifs :
-1. **Gestionnaire de collection** : Ajouter, modifier et rechercher des cartes.
-   - Suivi et organisation des cartes physiques.
-   - Import/export des collections au format CSV ou Excel.
+### 2.1 **Objectifs Principaux**
+1. **Gestionnaire de collection**  
+   - Ajouter, modifier, rechercher des cartes.  
+   - Suivre et organiser la collection (cartes possédées, manquantes, etc.).  
+   - Export/Import au format CSV ou Excel (fonctionnalité simple d’import/export prévue dès le MVP).
 
-2. **Optimisation de decks** : Construire, stocker et simuler des decks.
-   - Génération automatique basée sur des critères (type, synergie, etc.).
-   - Simulation de matchs.
+2. **Construction de decks**  
+   - Créer et gérer des decks de manière manuelle.  
+   - Permettre l’optimisation de base (analyse rapide de la répartition des types, par exemple).  
 
-3. **Base de données Pokémon** : Accéder aux données des Pokémon des jeux vidéo et des cartes.
-   - Intégration des cartes Pokémon avec leurs détails.
-   - Informations croisées sur les cartes et les Pokémon.
+3. **Base de données Pokémon (cartes)**  
+   - Disposer d’un référentiel permettant d’identifier clairement chaque carte : nom, extension, rareté, etc.  
+   - Lier les cartes aux informations principales (type, HP, attaques, etc.).
 
-4. **Interface intuitive** : Priorité à la simplicité et à l'ergonomie.
-   - Design adapté à la fois aux collectionneurs et aux joueurs stratégiques.
+4. **Interface intuitive**  
+   - Rendre la navigation fluide pour tous les utilisateurs, qu’ils soient collectionneurs ou joueurs.  
+   - Fournir un accès facile aux fonctionnalités essentielles (collection, decks, profil).
 
-### Objectifs Secondaires :
-1. **Partage communautaire** :
-   - Comparaison de decks et échanges de cartes.
+5. **Authentification des utilisateurs**  
+   - Créer un compte, se connecter et gérer ses préférences.  
+   - Sécuriser l’accès aux données personnelles.
 
-2. **Gamification** :
-   - Succès et badges pour inciter à l’utilisation.
+### 2.2 **Objectifs Secondaires** 
+1. **Partage communautaire**  
+   - Partager ses decks, consulter et comparer d’autres collections ou decks.  
 
-3. **Fonctionnalités hors ligne** :
-   - Accès à la gestion de la collection sans connexion.
+2. **Gamification**  
+   - Mise en place de badges ou succès pour récompenser l’utilisation et encourager l’engagement.  
 
----
+3. **Optimisation avancée des decks**  
+   - Génération automatique de decks selon des critères (synergies, budget, compatibilité tournois).  
 
-### **MVP - Définition et Fonctionnalités Critiques**
+4. **Simulation de matchs**  
+   - Permettre à l’utilisateur de tester ses decks contre des adversaires virtuels.  
 
-#### **Définition du MVP (Minimum Viable Product)**
-
-Le MVP pour "Pokémon Manager" se concentrera sur les fonctionnalités essentielles permettant aux utilisateurs de gérer leur collection de cartes, créer des decks et optimiser leurs expériences de jeu. Les fonctionnalités critiques incluront la gestion de la collection, la construction manuelle de decks et la possibilité de se connecter à un profil utilisateur. Ces éléments permettent de poser les bases d'un produit fonctionnel et prêt à être testé par les utilisateurs.
-
-#### **Fonctionnalités Critiques** :
-1. **Authentification des utilisateurs** : Permettre la création de comptes, la connexion et la gestion du profil.
-2. **Gestion de la collection de cartes** : Ajouter, modifier, et visualiser les cartes de la collection.
-3. **Construction manuelle de decks** : Permettre à l'utilisateur de créer et stocker des decks personnalisés.
-4. **Interface utilisateur intuitive** : Interface simple pour naviguer entre les différentes sections (collection, decks, profil utilisateur).
-5. **Base de données des cartes Pokémon** : Lier les cartes à leurs informations pertinentes (type, rareté, etc.).
-
-#### **Fonctionnalités Secondaires** :
-1. **Partage communautaire** : Permettre à l'utilisateur de partager ses decks et comparer ses collections avec d'autres utilisateurs.
-2. **Gamification** : Implémentation d'un système de badges ou de succès pour récompenser l'utilisation de l'application.
-3. **Optimisation automatique des decks** : Générer des decks optimisés selon les critères de l'utilisateur (type, synergie, etc.).
-4. **Exportation et importation de collections** : Ajouter des options pour exporter ou importer des collections au format CSV ou Excel.
-5. **Simulation de matchs** : Permettre à l'utilisateur de tester ses decks dans des simulations contre des adversaires virtuels.
+5. **Fonctionnalités hors ligne**  
+   - Consultation et modification basique de la collection sans connexion, avec synchronisation automatique au retour en ligne.  
 
 ---
 
-## **Cas d'Usage**
+## 3. **Définition du MVP (Minimum Viable Product)**
 
-### **1. Gestionnaire de Collection**
-#### **1.1 Visualisation de la collection**  
-**Résumé :**  
-Permettre à l'utilisateur de visualiser sa collection complète en distinguant les cartes possédées des cartes manquantes, avec plusieurs options d’affichage et de filtrage.  
+Le **MVP** se concentre sur les fonctionnalités **indispensables** pour offrir une valeur immédiate aux utilisateurs :
 
-**Acteurs :**  
-- **Utilisateur** : Souhaite explorer et gérer sa collection.  
+1. **Authentification (Création et Connexion)**  
+   - Gestion de compte utilisateur : création, connexion, réinitialisation de mot de passe.  
 
-**Préconditions :**  
-- L'utilisateur a enregistré des cartes dans sa collection.  
-- La base de données est accessible pour afficher les cartes manquantes.  
+2. **Gestion de la Collection**  
+   - Ajout, suppression, modification et recherche de cartes.  
+   - Visualisation de la collection en distinguant cartes possédées / manquantes.  
+   - Export de la collection (CSV/Excel) pour partage ou sauvegarde rapide.
 
-**Scénario principal :**  
-1. L'utilisateur accède à sa collection.  
-2. L'application affiche la collection sous deux formats possibles :  
-   - **Mode galerie** : Visuels des cartes affichés sous forme de "trombinoscope".  
-   - **Mode liste** : Détails des cartes listés dans un tableau (nom, extension, quantité, etc.).  
-3. Les cartes sont affichées avec une distinction claire :  
-   - **Possédées :** Cartes colorées et claires.  
-   - **Manquantes :** Cartes grisées.  
-4. L'utilisateur peut :  
-   - Cliquer sur une carte grisée pour l’ajouter directement à sa collection (voir cas d’usage "Ajouter une carte").  
-   - Filtrer la collection selon différents critères (type, extension, rareté, etc.).  
+3. **Construction Manuelle de Decks**  
+   - Création de decks en sélectionnant des cartes depuis la collection.  
+   - Sauvegarde et visualisation de decks (nombre de cartes, types principaux, etc.).  
 
-**Extensions :**  
-- **Statistiques de collection :** Afficher des graphiques ou chiffres clés (ex : % de cartes possédées par extension).  
-- **Vue personnalisée :** L'utilisateur peut sauvegarder des filtres et ordres de tri pour afficher les cartes selon ses préférences.
-- **Importation de collection au format CSV :**  
-  Permet à l'utilisateur d'importer un fichier CSV pour ajouter ou mettre à jour les cartes de sa collection. Le fichier doit respecter un format préétabli pour que les données soient intégrées correctement.  
-- **Exportation de collection au format CSV :**  
-  Offre la possibilité de générer un fichier CSV contenant toutes les cartes de la collection de l'utilisateur, avec leurs détails (quantités, extensions, raretés, etc.). Ce fichier peut être utilisé pour partager ou sauvegarder la collection.  
+4. **Base de Données des Cartes**  
+   - Données minimales : nom, extension, rareté, type, HP.  
+   - Liaison avec la collection (indication possédé / manquant).  
+
+5. **Interface Utilisateur Simple**  
+   - Navigation claire : page Collection, page Decks, page Profil.  
+   - Mise en avant des fonctionnalités de base (ajout de cartes, création de deck, etc.).  
+
+**Ce périmètre doit être entièrement fonctionnel** pour valider la première version du produit et recueillir les retours des utilisateurs. Les autres fonctionnalités seront intégrées après ce socle validé.
 
 ---
 
-#### **1.2 Ajouter une carte à la collection**
-**Résumé :**  
-Permettre à l'utilisateur d’ajouter une nouvelle carte à sa collection en recherchant dans la base de données des cartes ou en naviguant directement dans la liste visuelle des cartes. 
+## 4. **Fonctionnalités Futures (Hors MVP)**
 
-**Acteurs :**  
-- **Utilisateur** : Collectionneur souhaitant enregistrer une carte.
+Certaines fonctionnalités sont identifiées comme désirables, mais **repoussées à des phases ultérieures** :
 
-**Préconditions :**  
-- L'utilisateur est connecté à l'application.  
-- La base de données des cartes est accessible pour récupérer les informations de la carte.  
+1. **Partage Communautaire**  
+   - Système de comparaison de decks ou de collections entre utilisateurs.  
 
-**Scénario principal :**  
-1. L'utilisateur accède à la fonction "Ajouter une carte".  
-2. L'application propose deux options :  
-   - **Rechercher une carte :**  
-     a. L'utilisateur saisit un ou plusieurs critères (nom, type, extension, rareté, etc.).  
-     b. L'application affiche les cartes correspondant aux critères de recherche sous forme de liste ou galerie visuelle.  
-     c. L'utilisateur sélectionne la carte souhaitée et accède à un formulaire d’ajout personnalisé (quantité, état, etc.).  
-   - **Explorer la base de données :**  
-     a. L'utilisateur parcourt visuellement toutes les cartes disponibles (mode galerie ou liste).  
-     b. Les cartes non possédées apparaissent grisées et les cartes déjà dans la collection sont colorées.  
-     c. L'utilisateur clique sur une carte grisée pour accéder au formulaire d'ajout.  
-3. Une fois le formulaire complété, l'utilisateur valide l'ajout.  
-4. L'application met à jour la collection et affiche un message de confirmation.  
+2. **Gamification**  
+   - Introduction de succès (par exemple, ajout d’un certain nombre de cartes) ou de badges spécifiques.  
 
-**Extensions :**  
-- **Préremplissage automatique** : Si une carte est sélectionnée depuis la base de données, les champs de base (nom, extension, rareté) sont préremplis.
-- Si la carte existe déjà dans la collection, afficher une option pour **mettre à jour la quantité** plutôt que d’ajouter une nouvelle entrée.
-- **Ajout rapide :** L'utilisateur peut ajouter une carte en un clic (quantité par défaut = 1, état par défaut = "Neuf").
+3. **Optimisation Automatique des Decks**  
+   - Génération d’un deck optimal selon certains critères (type, synergie, rareté, budget).  
+
+4. **Simulation de Matchs**  
+   - Modélisation d’adversaires et mécaniques de jeu pour tester la performance d’un deck.  
+
+5. **Mode Hors Ligne Avancé**  
+   - Modification complète de la collection, puis synchronisation en ligne (avec gestion des conflits).  
+
+6. **Gestion des Accessoires**  
+   - Inventaire des jetons, tapis, boîtiers, etc.  
+
+> **Recommandation** : introduire ces fonctionnalités de manière itérative, en s’appuyant sur le feedback utilisateur pour prioriser celles qui apportent le plus de valeur à la communauté (ex. implémenter d’abord un partage simple, puis développer la simulation de matchs).
 
 ---
 
-#### **1.3 Modifier les informations d'une carte**
-**Résumé :**  
-Permettre à l'utilisateur de mettre à jour les détails d'une carte déjà ajoutée à la collection.
+## 5. **Cas d’Usage Principaux du MVP**
 
-**Acteurs :**  
-- **Utilisateur** : Souhaite modifier une carte.  
+### 5.1 **Gestion de la Collection**
 
-**Préconditions :**  
-- La carte doit être déjà enregistrée dans la collection.  
-- L'utilisateur est connecté.  
+#### 5.1.1 Visualiser la Collection
+- **But** : Permettre à l’utilisateur de parcourir ses cartes possédées et manquantes.  
+- **Actions** :  
+  - Mode liste ou galerie.  
+  - Filtres de base (nom, extension, rareté, type).  
 
-**Scénario principal :**  
-1. L'utilisateur accède à la liste de sa collection.  
-2. Il sélectionne une carte à modifier.  
-3. L'application affiche un formulaire prérempli avec les informations actuelles de la carte.  
-4. L'utilisateur modifie les champs souhaités.  
-5. Il soumet les modifications.  
-6. L'application met à jour les informations dans la base de données et affiche une confirmation.
+#### 5.1.2 Ajouter une Carte
+- **But** : Enregistrer une nouvelle carte dans la collection.  
+- **Actions** :  
+  - Recherche via texte (nom) ou critères (extension, rareté, etc.).  
+  - Formulaire d’ajout (quantité, état éventuel).  
 
-**Extensions :**  
-- Si l'utilisateur fait une erreur, permettre une option d'annulation ou de réinitialisation des modifications avant validation.  
+#### 5.1.3 Modifier les Informations d’une Carte
+- **But** : Mettre à jour la quantité ou l’état d’une carte possédée.  
+- **Actions** :  
+  - Sélection d’une carte existante.  
+  - Modification via un formulaire pré-rempli.  
 
----
+#### 5.1.4 Rechercher une Carte
+- **But** : Trouver rapidement une carte précise dans la collection.  
+- **Actions** :  
+  - Critères simples (nom, rareté, type).  
+  - Résultats en liste ou galerie.
 
-#### **1.4 Rechercher une carte dans la collection**
-**Résumé :**  
-Permettre à l'utilisateur de rechercher une carte précise ou un ensemble de cartes dans sa collection.
-
-**Acteurs :**  
-- **Utilisateur** : Souhaite retrouver rapidement une carte ou des cartes correspondant à des critères spécifiques.
-
-**Préconditions :**  
-- L'utilisateur a déjà des cartes enregistrées dans sa collection.  
-
-**Scénario principal :**  
-1. L'utilisateur accède à la page de recherche de sa collection.  
-2. Il saisit un ou plusieurs critères de recherche :  
-   - Nom.  
-   - Extension.  
-   - Rareté.  
-   - Type (feu, eau, etc.).  
-   - Statut de collection (manquante, possédée).  
-3. L'utilisateur lance la recherche.  
-4. L'application affiche une liste des cartes correspondant aux critères.  
-
-**Extensions :**  
-- Ajouter un **système de filtres avancés** pour combiner plusieurs critères.  
-- Permettre une recherche par mots-clés ou ID de carte.  
+#### 5.1.5 Exporter/Importer la Collection
+- **But** : Créer un fichier CSV/Excel pour sauvegarde ou ajout en masse.  
+- **Actions** :  
+  - Export : générer un CSV contenant les cartes possédées (nom, extension, quantité, etc.).  
+  - Import (format prédéterminé) : mettre à jour la collection avec un fichier externe.
 
 ---
 
-### **2. Optimisation des Decks**
+### 5.2 **Construction de Decks**
 
-#### **2.1 Construction manuelle de decks**  
-- Permettre de créer un deck en sélectionnant individuellement des cartes depuis la collection.  
-- Offrir l'option de construire un deck avec :  
-   - **Les cartes de la collection possédée.**  
-   - **Les cartes non possédées.**  
-- Indiquer clairement la provenance des cartes lors de la sélection :  
-   - Les cartes possédées affichées normalement.  
-   - Les cartes non possédées affichées grisées ou avec un indicateur visuel.  
-- Afficher les statistiques en temps réel du deck en construction : nombre de cartes, équilibre des types, répartition des énergies et des Pokémon.  
-- Mettre en place un système de recherche et de filtres avancés pour sélectionner les cartes : par type, rareté, coût en énergie, ou capacités spéciales.  
-- Offrir la possibilité d’ajouter des notes ou des tags à un deck pour préciser son objectif ou sa stratégie (par exemple : "Deck défensif", "Stratégie feu").  
+#### 5.2.1 Création Manuelle
+- **But** : Sélectionner des cartes possédées pour constituer un deck personnel.  
+- **Actions** :  
+  - Filtrer la collection pour trouver les cartes souhaitées.  
+  - Ajouter ou retirer des cartes du deck.  
+  - Afficher un compteur du nombre de cartes et la répartition des types.  
 
-#### **2.2 Génération automatique de decks**  
-- Générer un deck basé sur une ou plusieurs cartes pivot choisies par l’utilisateur.  
-- Offrir des critères de génération :  
-   - **Types spécifiques** : choisir des cartes liées à un ou plusieurs types (eau, feu, etc.).  
-   - **Synergies stratégiques** : prioriser les cartes avec des effets ou capacités qui se complètent (par exemple, les Pokémon avec des attaques combinées ou des soutiens).  
-   - **Budget de coût** : définir une limite de coût d’achat ou de valeur totale pour les cartes sélectionnées.  
-   - **Conformité aux règles** : générer uniquement des decks valides selon les formats de tournoi (Standard, Étendu).  
-- Afficher le deck généré en différenciant :  
-   - Les cartes présentes dans la collection, mises en avant avec une couleur ou un style spécifique.  
-   - Les cartes absentes de la collection, affichées grisées ou avec une icône indiquant leur absence.  
-- Afficher un résumé du deck proposé avant validation : statistiques globales, points forts, éventuelles faiblesses, et options de modification.  
-
-#### **2.3 Simulation de matchs pour évaluer l'efficacité**  
-- Simuler des matchs contre des adversaires virtuels en utilisant des decks prédéfinis ou générés aléatoirement.  
-- Mettre en évidence les performances du deck :  
-   - Taux de victoire.  
-   - Cartes clés jouées pendant le match.  
-   - Équilibre entre l’attaque, la défense et les soutiens.  
-- Offrir la possibilité de rejouer une simulation pour tester différents scénarios.  
-
-#### **2.4 Validation de la conformité aux règles officielles**  
-- Intégrer un validateur automatique qui vérifie les règles officielles (limites de cartes, cartes interdites ou restreintes, formats spécifiques comme Standard ou Étendu).  
-- Afficher les erreurs ou incompatibilités, avec des suggestions pour rendre le deck conforme.  
-- Ajouter une fonctionnalité d’exportation pour générer un rapport complet du deck (liste des cartes, statistiques, conformité).
+#### 5.2.2 Gestion des Decks
+- **But** : Gérer plusieurs decks, les consulter ou les modifier.  
+- **Actions** :  
+  - Liste des decks créés.  
+  - Modification du nom du deck, ajout/suppression de cartes.  
+  - Visualisation rapide : nombre de Pokémon, Énergies, dresseurs, etc.
 
 ---
 
-### **3. Base de Données des Cartes et Pokémon**
+### 5.3 **Authentification et Profil Utilisateur**
 
-Cette étape est directement liée à la gestion de la **collection**, puisque toutes les informations des cartes et Pokémon sont centralisées dans une **unique base de données connectée**. L’objectif est d’offrir une gestion détaillée, des possibilités de filtrage, et des visualisations enrichies.
+#### 5.3.1 Création de Compte
+- **But** : Permettre à un nouvel utilisateur de s’inscrire.  
+- **Actions** :  
+  - Saisie de nom d’utilisateur, email, mot de passe.  
+  - Validation de l’email (selon la stratégie retenue).  
 
-#### **3.1 Base de Données des Cartes Pokémon**  
-   - **Contenu principal** :  
-     - **Image** : inclure un visuel clair de chaque carte, en version normale et chromatique (si disponible).  
-     - **Statistiques** : afficher les points de vie (HP), les attaques (coût en énergie, dégâts, effets), et les coûts de retraite.  
-     - **Rareté** : spécifier si la carte est commune, rare, holographique, etc.  
-     - **Extension** : classer chaque carte par extension (nom de l’extension, numéro et total dans la série, ex. : "Épée et Bouclier #123/200").  
-     - **Descriptions** : inclure les textes spécifiques à la carte, comme ses capacités spéciales ou informations sur le Pokémon.  
-     - **Disponibilité dans la collection** :  
-       - Marquer les cartes comme **possédées** (avec quantité exacte) ou **absentes**.  
-       - Les cartes possédées seront affichées normalement, tandis que les cartes non possédées seront grisées pour une meilleure lisibilité.  
-     - **Valeur estimée** : fournir une estimation des prix, mise à jour via une API tierce.  
+#### 5.3.2 Connexion
+- **But** : Permettre à un utilisateur existant de se connecter.  
+- **Actions** :  
+  - Saisie des identifiants (email/nom d’utilisateur, mot de passe).  
+  - Accès sécurisé à sa collection et ses decks.
 
-   - **Fonctionnalités supplémentaires** :  
-     - **Filtrage avancé** :  
-       - Permettre la recherche par nom, type (Feu, Eau, etc.), rareté, extension, ou possession.  
-       - Offrir des options de tri (par numéro de carte, HP, valeur estimée, etc.).  
-     - **Gestion des extensions** :  
-       - Classer les cartes par extensions pour une vue consolidée.  
-       - Afficher le pourcentage de complétion de chaque extension.  
-
-#### **3.2 Base de Données des Pokémon (Jeux Vidéo)**  
-   - **Contenu principal** :  
-     - **Nom et numéro du Pokédex** : référencer chaque Pokémon avec son numéro officiel.  
-     - **Types** : spécifier les types principaux et secondaires (ex. : Dragon, Vol).  
-     - **Visuels** : proposer les versions normales et chromatiques des Pokémon.  
-     - **Statistiques de base** : inclure les valeurs d’attaque, défense, vitesse, etc.  
-     - **Talents** : lister les talents et leurs effets spécifiques.  
-     - **Faiblesses et résistances** : indiquer les interactions stratégiques par type.  
-     - **Descriptions** : fournir les textes officiels des jeux (ex. : Pokédex).  
-
-   - **Croisement avec les cartes** :  
-     - Lier chaque Pokémon aux cartes associées dans la base de données des cartes.  
-     - Proposer une vue combinée où toutes les cartes disponibles d’un Pokémon sont listées, avec une différenciation entre les cartes possédées et absentes.  
-
-#### **3.3 (Optionnel) Base de Données des Accessoires Pokémon**  
-   - **Contenu principal** :  
-     - Référencer les accessoires tels que :  
-       - **Jetons** : marqueurs de dégâts et de statut.  
-       - **Boîtiers et pochettes** : détails sur les solutions de rangement.  
-       - **Tapis de jeu** : designs et dimensions des tapis de tournoi.  
-     - Indiquer si ces accessoires sont possédés ou souhaités.  
-
-   - **Lien avec la collection** :  
-     - Permettre une gestion centralisée des accessoires dans la même interface que les cartes et Pokémon.  
-
-#### **Fonctionnalités Transversales**  
-   - **Vue centralisée** :  
-     - Relier la base de données directement à la collection pour afficher et gérer les cartes possédées ou absentes.  
-     - Synchroniser automatiquement les informations entre les bases de données et l’état de la collection.  
-   - **Filtrage et recherche globale** :  
-     - Offrir un moteur de recherche unique pour naviguer dans toutes les données (cartes, Pokémon, extensions, accessoires).  
-   - **Mises à jour automatiques** :  
-     - Intégrer des API comme PokéAPI et TCGdex pour enrichir les données et assurer une synchronisation en temps réel.  
-     - Historiser les modifications pour garantir la traçabilité.  
-
-Avec cette approche, la base de données devient un véritable hub central pour organiser et visualiser toutes les informations liées aux cartes et Pokémon, tout en s’intégrant parfaitement à la gestion de la collection.
-
-### **4. Interface Intuitive**  
-Concevoir une interface utilisateur qui répond aux besoins des **collectionneurs** et des **joueurs stratégiques**, tout en assurant une **expérience fluide et agréable**. Priorité donnée à une navigation simplifiée, un design épuré, et des fonctionnalités adaptées.
-
-#### **4.1 Gestion du Profil Utilisateur**
-**Résumé :**  
-Permettre à l'utilisateur de créer, gérer et modifier son profil, ainsi que de se connecter à l'application pour personnaliser son expérience.
-
-**Acteurs :**  
-- **Utilisateur** : Souhaite gérer son profil et accéder à ses données personnelles.  
-- **Administrateur** : Gère l'authentification et la gestion des comptes utilisateurs.
-
-**Préconditions :**  
-- L'utilisateur dispose d'un compte utilisateur ou peut en créer un.  
-- L'utilisateur est connecté à Internet.  
-
-**Scénario principal :**  
-1. L'utilisateur ouvre l'application et accède à la page de connexion.
-2. L'application propose deux options :  
-   - **Se connecter avec un compte existant** :  
-     a. L'utilisateur entre son nom d'utilisateur et son mot de passe.  
-     b. L'application vérifie les informations et connecte l'utilisateur si les identifiants sont valides.
-   - **Créer un compte** :  
-     a. L'utilisateur saisit son nom, prénom, adresse e-mail et choisit un mot de passe.  
-     b. L'application vérifie que l'adresse e-mail est unique et valide.  
-     c. Un e-mail de confirmation est envoyé pour valider la création du compte.
-3. Une fois connecté, l'utilisateur peut accéder à la page de gestion de son profil :  
-   - Modifier son nom, son adresse e-mail et son mot de passe.  
-   - Ajouter une photo de profil et ajuster ses préférences d'affichage (ex : mode sombre ou clair).
-4. L'utilisateur peut également consulter son historique de connexions et de modifications récentes.
-5. L'utilisateur peut se déconnecter ou supprimer son compte à tout moment.
-
-**Extensions :**  
-- **Réinitialisation du mot de passe** : Permettre à l'utilisateur de réinitialiser son mot de passe en cas d'oubli.  
-- **Authentification via réseaux sociaux** : Ajouter la possibilité de se connecter via des plateformes tierces (Google, Facebook, etc.).
-
-#### **4.2 Vue pour les Collectionneurs**  
-- **Tableau de bord dédié** :  
-   - Afficher un récapitulatif de la collection :  
-      - **Progression par extension** : pourcentage de cartes possédées et manquantes par série.  
-      - **Statistiques globales** : nombre total de cartes possédées, raretés, et extensions complètes.  
-   - Proposer un bouton "Ajouter une carte" pour enregistrer rapidement de nouvelles acquisitions.  
-
-- **Affichage des cartes** :  
-   - Mode **grille** ou **liste** pour visualiser les cartes, avec :  
-      - Image de la carte.  
-      - Statut de possession : cartes possédées (colorées) ou manquantes (grises).  
-      - Informations clés (nom, extension, rareté, prix estimé).  
-   - Possibilité de **zoomer sur une carte** pour voir ses détails complets, avec option de modification rapide (ajouter/supprimer).  
-
-- **Filtres avancés** :  
-   - Rechercher par nom, type, extension, rareté, ou statut de possession.  
-   - Sauvegarder des filtres personnalisés (ex. : "Toutes les cartes rares manquantes dans Épée et Bouclier").  
-
-- **Export et partage** :  
-   - Exporter la liste des cartes manquantes en format CSV ou PDF pour échange ou achat.  
-   - Générer un lien partageable de la collection pour les communautés en ligne.  
-
-#### **4.3 Vue pour les Joueurs Stratégiques**  
-- **Création et gestion de decks** :  
-   - Accès direct aux fonctionnalités de **construction de decks manuels ou automatiques**.  
-   - Afficher les **statistiques clés du deck** :  
-      - Répartition des types (Feu, Eau, etc.).  
-      - Coût moyen en énergie.  
-      - Conformité aux règles des tournois.  
-   - Tester le deck avec une **simulation rapide de partie** intégrée.  
-
-- **Analyse stratégique** :  
-   - Recommander des cartes en fonction des synergies manquantes dans le deck actuel (ex. : "Ajoute une carte de soutien pour optimiser tes tours").  
-   - Comparer plusieurs decks côte à côte :  
-      - Points forts/faibles de chaque deck.  
-      - Scénarios possibles en partie (ex. : main de départ idéale).  
-
-- **Visualisation des cartes du deck** :  
-   - Afficher les cartes sélectionnées avec distinction entre **cartes possédées** et **non possédées**.  
-   - Permettre un tri par coût, type, ou rôle (attaque, défense, soutien).  
-
-- **Récapitulatif des parties simulées** :  
-   - Afficher des statistiques après une simulation :  
-      - Taux de victoire.  
-      - Temps moyen pour réaliser une stratégie gagnante.  
-      - Faiblesses identifiées.  
-
-#### **4.4 Vue Transversale (Collectionneurs et Joueurs)**  
-- **Accueil personnalisable** :  
-   - Personnaliser l’affichage selon les préférences (focus sur collection ou decks).  
-   - Widget rapide pour voir les nouvelles extensions ou les actualisations des règles.  
-
-- **Navigation intuitive** :  
-   - Barre de menu simple et accessible pour passer d'une vue à l'autre :  
-      - Collection.  
-      - Decks.  
-      - Simulation.  
-      - Statistiques générales.  
-   - Utilisation d’**icônes et de couleurs** pour guider l’utilisateur (ex. : vert pour les cartes possédées, gris pour les cartes manquantes).  
-
-- **Mode hors ligne** :  
-   - Permettre de consulter et gérer la collection et les decks sans connexion, avec synchronisation automatique lorsque la connexion est rétablie.  
-
-#### **4.5 Design Ergonomique et Adaptatif**  
-- **Design responsive** :  
-   - Adapté pour ordinateur, tablette, et smartphone.  
-   - Interface optimisée pour la navigation tactile.  
-
-- **Thèmes personnalisables** :  
-   - Mode clair et sombre, avec choix de couleurs pour correspondre aux goûts de l’utilisateur.  
-
-- **Guides intégrés** :  
-   - Tutoriels interactifs pour aider les nouveaux utilisateurs à prendre en main l’application.  
-   - Suggestions contextuelles (ex. : "Utilise le filtre pour rechercher des cartes rares").  
-
-- **Accessibilité** :  
-   - Texte ajustable en taille.  
-   - Navigation compatible avec les lecteurs d’écran pour les utilisateurs malvoyants.  
-
-Avec cette interface, collectionneurs et joueurs stratégiques trouveront des outils puissants et simples à utiliser, tout en profitant d’une expérience agréable et adaptée à leurs besoins spécifiques.
+#### 5.3.3 Gestion du Profil
+- **But** : Gérer les informations de compte et préférences.  
+- **Actions** :  
+  - Changer le mot de passe ou l’email.  
+  - Personnaliser l’interface (mode clair/sombre, langue, etc.).  
 
 ---
 
-## **Architecture Technique**
+## 6. **Base de Données et Gestion des Données**
 
-### Backend :
-- Langage : Python.
-- Framework : FastAPI (ou Flask).
-- Base de données : PostgreSQL (SQLite pour le prototype).
+### 6.1 **Base de Données des Cartes**
+- **Champs Minimaux (MVP)** :  
+  - Nom, extension, rareté, type, HP.  
+- **Stockage du visuel** : Optionnel pour le MVP (peut être un lien ou un ID d’image).  
+- **Différenciation possédé/manquant** : Lier l’utilisateur et la carte via une table pivot (ex. `user_cards`) indiquant la quantité possédée.
 
-### Frontend :
-- Langage : JavaScript.
-- Framework : React (ou Vue.js).
+### 6.2 **Intégration aux API Externes**
+- **État MVP** : Les données peuvent être saisies ou importées manuellement, sans intégration obligatoire d’API.  
+- **Évolutions Futures** : Utiliser des APIs (TCGdex, Pokémon TCG API) pour enrichir automatiquement la base de données (rareté, extension, images HD, etc.).
 
-### Intégrations :
-- API de référence : TCGdex ou Pokémon TCG API.
-- Format d'import/export : CSV, Excel.
-
-### Outils Complémentaires :
-- Gestion des tests : Pytest pour le backend, Jest pour le frontend.
-- Gestion de projet : GitHub Projects (Kanban).
-
----
-
-## **Planification des Lots Fonctionnels**
-
-### **Lot 1 : Version MVP**
-- **Fonctionnalités :**
-  - Gestionnaire de collection (ajout, suppression, filtrage).
-  - Visualisation des cartes avec des données minimales.
-  - Export CSV.
-
-- **Évaluation :**
-  - Très pertinent pour un MVP, car il pose les bases techniques nécessaires.
-  - Export CSV est une fonctionnalité pratique et réaliste à ce stade.
-
-- **Recommandation :**
-  - Préciser les "données minimales" affichées (par exemple : nom, type, rareté, puissance).
-  - Ajouter un test simple pour valider le bon fonctionnement de l’export CSV.
-
-### **Lot 2 : Optimisation des Decks**
-- **Fonctionnalités :**
-  - Construction manuelle de decks.
-  - Génération automatique avec critères simples.
-
-- **Évaluation :**
-  - Ce lot enrichit logiquement le MVP en ajoutant une valeur significative pour les utilisateurs (optimisation des decks).
-  - La génération automatique peut être simplifiée dans un premier temps (par exemple, choisir les cartes les plus puissantes d’un type donné).
-
-- **Recommandation :**
-  - Décrire les "critères simples" pour la génération automatique (types dominants, puissance globale, etc.).
-  - Tester l’interface utilisateur pour la construction manuelle dès la fin du développement.
-
-### **Lot 3 : Améliorations et API**
-- **Fonctionnalités :**
-  - Intégration de données via API externe.
-  - Simulation de matchs.
-
-- **Évaluation :**
-  - L’intégration API est un gros ajout technique mais cohérent avec la roadmap.
-  - La simulation de matchs est une excellente extension fonctionnelle, mais attention à bien la cadrer pour éviter une complexité excessive.
-
-- **Recommandation :**
-  - Prioriser l’API (PokéAPI ou TCGdex) avant d’aborder la simulation de matchs, car ces données enrichiront l'expérience utilisateur.
-  - Prévoir une version minimaliste de la simulation (exemple : calcul automatique du gagnant basé sur la puissance totale des decks).
-
-### **Lot 4 : Fonctionnalités Communautaires et Gamification**
-- **Fonctionnalités :**
-  - Partage de decks.
-  - Succès et badges.
-
-- **Évaluation :**
-  - Ces fonctionnalités ajoutent un vrai engagement utilisateur. 
-  - Ce lot est bien positionné en fin de roadmap, car il s’appuie sur les bases fonctionnelles déjà établies.
-
-- **Recommandation :**
-  - Réfléchir aux formats et canaux de partage des decks (lien URL, export JSON, etc.).
-  - Créer une liste initiale de succès et badges simples pour tester l'intérêt des utilisateurs avant de complexifier.
+### 6.3 **Modèle d’Entités**
+- **Exemple simplifié** :  
+  - Table `users` (id, email, password, etc.)  
+  - Table `cards` (id, name, expansion, rarity, type, hp, etc.)  
+  - Table `user_cards` (user_id, card_id, quantity)  
+  - Table `decks` (id, user_id, deck_name, etc.)  
+  - Table `deck_cards` (deck_id, card_id, quantity)
 
 ---
 
-## **Prochaines Étapes**
-1. Valider les cas d’usage et la priorité des lots fonctionnels.
-2. Mettre en place l’environnement de développement (backend, frontend, base de données).
-3. Démarrer avec le lot 1 : Gestionnaire de collection (version basique).
-4. Tester les fonctionnalités de chaque lot avant de passer au suivant.
+## 7. **Interface Utilisateur**
+
+### 7.1 **Principes Généraux**
+- **Clarté et ergonomie** : Navigation minimale (Collection, Decks, Profil).  
+- **Adapté aux collectionneurs et joueurs** : Distinction claire entre cartes possédées et manquantes (colorées vs. grisées).  
+- **Filtres de base** : Simples et rapides à utiliser (nom, extension, rareté).  
+- **Mode clair/sombre** : Possibilité de personnalisation basique.  
+
+### 7.2 **Vue Collection**
+- **Tableau de bord** : Nombre total de cartes possédées, aperçu des extensions (facultatif pour le MVP).  
+- **Liste ou Galerie** : Vue personnalisable pour chaque utilisateur.  
+- **Ajouter une carte** : Bouton accessible, menant à un formulaire d’ajout.
+
+### 7.3 **Vue Decks**
+- **Gestion de decks** : Création, édition, suppression.  
+- **Aperçu** : Nombre de cartes, types principaux, etc.  
+- **Accès rapide** : Un clic pour voir la composition complète du deck.
+
+### 7.4 **Vue Profil**
+- **Informations de compte** : Nom d’utilisateur, email, préférence d’affichage.  
+- **Modification mot de passe** : Processus sécurisé.  
+- **Déconnexion** : Bouton pour quitter la session.
 
 ---
 
-## **Annexe : Références et Ressources**
-- [Pokémon TCG API Documentation](https://pokemontcg.io/).
-- [TCGdex Documentation](https://www.tcgdex.net/).
-- [GitHub Projects pour le suivi des tâches](https://docs.github.com/en/issues/planning-and-tracking-with-projects).
+## 8. **Architecture Technique**
+
+### 8.1 **Backend**
+- Langage : Python  
+- Framework recommandé : FastAPI ou Flask  
+- Base de données : PostgreSQL en production (SQLite acceptable pour prototypage)
+
+### 8.2 **Frontend**
+- Langage : JavaScript / TypeScript  
+- Framework recommandé : React ou Vue.js  
+- Communication avec l’API : appels REST (JSON)  
+
+### 8.3 **Intégrations**
+- **Import/Export** : CSV ou Excel pour la collection.  
+- **API externes** (évolution ultérieure) : TCGdex ou Pokémon TCG API.  
+
+### 8.4 **Tests**
+- **Backend** : Pytest  
+- **Frontend** : Jest ou équivalent  
+- Tests d’intégration : validation du flux complet (authentification, ajout de carte, etc.).
+
+---
+
+## 9. **Planification (Lots Fonctionnels)**
+
+1. **Lot 1 : MVP**  
+   - Authentification  
+   - Gestion basique de la collection (ajout, modification, suppression, visualisation)  
+   - Construction manuelle de decks  
+   - Export CSV  
+   - Interface simple  
+
+2. **Lot 2 : Optimisations et Premières Extensions**  
+   - Critères avancés pour la construction de decks (analyse de la répartition des types, etc.)  
+   - Récupération automatisée de certaines données via API (si nécessaire)  
+
+3. **Lot 3 : Simulation & Gamification**  
+   - Simulation basique de matchs (modèle simple)  
+   - Introduction de succès ou badges pour inciter à l’utilisation  
+
+4. **Lot 4 : Communauté & Offline**  
+   - Partage de decks / comparaison de collections  
+   - Fonctionnalités hors ligne plus poussées (synchronisation des modifications)  
+
+---
+
+## 11. **Conclusion**
+
+Le présent document pose les **bases** du projet Pokémon Manager et détaille :
+
+- Les **fonctions essentielles** pour le MVP (authentification, gestion de la collection, decks manuels, export CSV, interface simple).  
+- Les **fonctionnalités futures** qui viendront compléter l’application au fil des itérations (partage communautaire, gamification, simulation de matchs, etc.).  
+- Les **cas d’usage** assurant une expérience claire et utile.  
+- L’**architecture technique** de référence pour bâtir un système robuste, extensible et maintenable.
