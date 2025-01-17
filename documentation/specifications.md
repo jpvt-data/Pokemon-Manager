@@ -3,13 +3,14 @@
 ## 1. **Introduction**
 Le projet **Pokémon Manager** a pour vocation de proposer une plateforme permettant aux collectionneurs et aux joueurs de cartes Pokémon de gérer efficacement leur collection et de créer des decks pour optimiser leur expérience de jeu.
 
-Ce document constitue la **base** des spécifications du projet, en décrivant à la fois le périmètre **MVP (Minimum Viable Product)** et les fonctionnalités **évolutives** prévues par la suite. Les sections qui suivent clarifient les objectifs, les cas d’usage, les contraintes techniques et l’interface utilisateur cible.
+Ce document constitue la **base** des spécifications du projet, décrivant à la fois le périmètre **MVP (Minimum Viable Product)** et les fonctionnalités **évolutives** prévues par la suite. Les sections suivantes clarifient les objectifs, les cas d’usage, les contraintes techniques et l’interface utilisateur cible.
 
 ---
 
 ## 2. **Objectifs du Projet**
 
 ### 2.1 **Objectifs Principaux**
+
 1. **Gestionnaire de collection**  
    - Ajouter, modifier, rechercher des cartes.  
    - Suivre et organiser la collection (cartes possédées, manquantes, etc.).  
@@ -20,12 +21,13 @@ Ce document constitue la **base** des spécifications du projet, en décrivant �
    - Permettre l’optimisation de base (analyse rapide de la répartition des types, par exemple).
 
 3. **Base de données Pokémon (cartes)**  
-   - Disposer d’un référentiel permettant d’identifier clairement chaque carte : nom, extension, rareté, etc.  
+   - Disposer d’un référentiel permettant d’identifier clairement chaque carte : nom, extension, rareté, type, HP **et un visuel de la carte**.  
    - Lier les cartes aux informations principales (type, HP, attaques, etc.).
 
 4. **Interface intuitive**  
    - Rendre la navigation fluide pour tous les utilisateurs, qu’ils soient collectionneurs ou joueurs.  
-   - Fournir un accès facile aux fonctionnalités essentielles (collection, decks, profil).
+   - Fournir un accès facile aux fonctionnalités essentielles (collection, decks, profil).  
+   - Proposer un mode d’affichage visuel (liste ou galerie) avec la possibilité de **zoomer sur l’image** de chaque carte.
 
 5. **Authentification des utilisateurs**  
    - Créer un compte, se connecter et gérer ses préférences.  
@@ -58,6 +60,7 @@ Le **MVP** se concentre sur les fonctionnalités **indispensables** pour offrir 
 2. **Gestion de la Collection**  
    - Ajout, suppression, modification et recherche de cartes.  
    - Visualisation de la collection en distinguant cartes possédées / manquantes.  
+   - **Affichage des visuels de cartes** (images) en mode liste ou galerie, avec la possibilité de zoomer sur une carte.  
    - Export de la collection (CSV/Excel) pour partage ou sauvegarde rapide.
 
 3. **Construction Manuelle de Decks**  
@@ -65,14 +68,14 @@ Le **MVP** se concentre sur les fonctionnalités **indispensables** pour offrir 
    - Sauvegarde et visualisation de decks (nombre de cartes, types principaux, etc.).
 
 4. **Base de Données des Cartes**  
-   - Données minimales : nom, extension, rareté, type, HP.  
+   - Données minimales : nom, extension, rareté, type, HP **et champ pour l’image**.  
    - Liaison avec la collection (indication possédé / manquant).
 
 5. **Interface Utilisateur Simple**  
    - Navigation claire : page Collection, page Decks, page Profil.  
    - Mise en avant des fonctionnalités de base (ajout de cartes, création de deck, etc.).
 
-> **Important :** Le MVP reste inchangé. Il doit être entièrement fonctionnel pour valider la première version du produit et recueillir les retours des utilisateurs. Les fonctionnalités suivantes n’affectent **pas** le périmètre MVP initial.
+> **Important :** Le MVP doit être **entièrement fonctionnel** pour valider la première version du produit et recueillir les retours des utilisateurs. Les fonctionnalités ci-dessous, bien que souhaitables, n’affectent **pas** le périmètre MVP initial.
 
 ---
 
@@ -81,7 +84,6 @@ Le **MVP** se concentre sur les fonctionnalités **indispensables** pour offrir 
 Cette section regroupe à la fois les fonctionnalités déjà identifiées comme hors MVP et de nouvelles propositions innovantes, organisées par grandes catégories. Elles pourront être implémentées **après** la validation du MVP et selon les priorités définies par les retours utilisateurs.
 
 ### 4.1 **Fonctionnalités Hors MVP Déjà Identifiées**
-
 1. **Partage communautaire**  
    - Système de comparaison de decks ou de collections entre utilisateurs.  
    - Possibilité d’échanger des conseils ou des cartes (voir section « Échanges Directs entre Utilisateurs » ci-dessous).
@@ -111,7 +113,7 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 #### 4.2.1 **Innovations d’Analyse et de Recommandation**
 - **Analyse de Synergies entre Cartes**  
   - Détection automatique des Pokémon/cartes qui fonctionnent bien ensemble.  
-  - Score de synergie (ex. 1 à 5) basé sur les types, capacités, bonus.  
+  - Score de synergie (ex. 1 à 5) basé sur les types, capacités, bonus.
 
 - **Statistiques Avancées sur la Collection**  
   - Graphiques ou tableaux de bord dédiés (nombre de cartes par rareté, répartition par extension, progression globale, etc.).  
@@ -182,32 +184,36 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 #### 5.1.1 Visualiser la Collection
 - **But** : Permettre à l’utilisateur de parcourir ses cartes possédées et manquantes.  
 - **Actions** :  
-  - Mode liste ou galerie.  
-  - Filtres de base (nom, extension, rareté, type).
+  1. Sélectionner un mode d’affichage : liste ou galerie (avec miniatures des cartes).  
+  2. Cliquer sur une carte pour l’afficher en plus grand (zoom sur le visuel).  
+  3. Appliquer des filtres de base (nom, extension, rareté, type).  
 
 #### 5.1.2 Ajouter une Carte
 - **But** : Enregistrer une nouvelle carte dans la collection.  
 - **Actions** :  
-  - Recherche via texte (nom) ou critères (extension, rareté, etc.).  
-  - Formulaire d’ajout (quantité, état éventuel).
+  1. L’utilisateur accède à un formulaire « Ajouter une carte ».  
+  2. Il saisit les informations minimales (nom, extension, rareté, type, HP) et **l’URL du visuel**.  
+  3. Possibilité de chercher la carte par nom/extension si la base de données contient déjà des entrées similaires (mode auto-complétion).
 
 #### 5.1.3 Modifier les Informations d’une Carte
 - **But** : Mettre à jour la quantité ou l’état d’une carte possédée.  
 - **Actions** :  
-  - Sélection d’une carte existante.  
-  - Modification via un formulaire pré-rempli.
+  1. Sélectionner une carte déjà présente dans la collection.  
+  2. Modifier la quantité (ex. passer de 1 à 2 exemplaires) ou l’état (Neuf, Usé, etc.).  
+  3. Enregistrer les changements.
 
 #### 5.1.4 Rechercher une Carte
 - **But** : Trouver rapidement une carte précise dans la collection.  
 - **Actions** :  
-  - Critères simples (nom, rareté, type).  
-  - Résultats en liste ou galerie.
+  1. L’utilisateur saisit un ou plusieurs critères : nom, extension, rareté, type.  
+  2. Le système affiche les résultats sous forme de liste ou galerie.  
+  3. L’utilisateur peut zoomer sur un résultat pour vérifier l’image correspondante.
 
 #### 5.1.5 Exporter/Importer la Collection
 - **But** : Créer un fichier CSV/Excel pour sauvegarde ou ajout en masse.  
 - **Actions** :  
-  - Export : générer un CSV contenant les cartes possédées (nom, extension, quantité, etc.).  
-  - Import (format prédéterminé) : mettre à jour la collection avec un fichier externe.
+  1. **Export** : générer un CSV contenant les champs clés (nom, extension, rareté, type, HP, quantité, URL du visuel, etc.).  
+  2. **Import** (format prédéterminé) : ajouter ou mettre à jour les cartes de la collection en masse.  
 
 ---
 
@@ -216,16 +222,16 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 #### 5.2.1 Création Manuelle
 - **But** : Sélectionner des cartes possédées pour constituer un deck personnel.  
 - **Actions** :  
-  - Filtrer la collection pour trouver les cartes souhaitées.  
-  - Ajouter ou retirer des cartes du deck.  
-  - Afficher un compteur du nombre de cartes et la répartition des types.
+  1. Depuis la collection, filtrer ou rechercher les cartes souhaitées.  
+  2. Ajouter des cartes au deck en indiquant la quantité.  
+  3. Afficher un **compteur** du nombre de cartes et la répartition des types (ex. Feu, Eau, etc.).
 
 #### 5.2.2 Gestion des Decks
 - **But** : Gérer plusieurs decks, les consulter ou les modifier.  
 - **Actions** :  
-  - Liste des decks créés.  
-  - Modification du nom du deck, ajout/suppression de cartes.  
-  - Visualisation rapide : nombre de Pokémon, Énergies, dresseurs, etc.
+  1. Lister les decks déjà créés (nom, nombre de cartes).  
+  2. Modifier un deck (ajouter/supprimer des cartes, renommer le deck).  
+  3. Visualiser un aperçu rapide : nombre de Pokémon, Énergies, dresseurs, etc.
 
 ---
 
@@ -234,20 +240,22 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 #### 5.3.1 Création de Compte
 - **But** : Permettre à un nouvel utilisateur de s’inscrire.  
 - **Actions** :  
-  - Saisie de nom d’utilisateur, email, mot de passe.  
-  - Validation de l’email (selon la stratégie retenue).
+  1. Saisie de nom d’utilisateur, email, mot de passe.  
+  2. Validation de l’email (selon la stratégie retenue).  
+  3. Premier accès au tableau de bord (collection vide par défaut).
 
 #### 5.3.2 Connexion
 - **But** : Permettre à un utilisateur existant de se connecter.  
 - **Actions** :  
-  - Saisie des identifiants (email/nom d’utilisateur, mot de passe).  
-  - Accès sécurisé à sa collection et ses decks.
+  1. Saisie des identifiants (email/nom d’utilisateur, mot de passe).  
+  2. Accès sécurisé à sa collection et ses decks.
 
 #### 5.3.3 Gestion du Profil
 - **But** : Gérer les informations de compte et préférences.  
 - **Actions** :  
-  - Changer le mot de passe ou l’email.  
-  - Personnaliser l’interface (mode clair/sombre, langue, etc.).
+  1. Changer le mot de passe ou l’email.  
+  2. Personnaliser l’interface (mode clair/sombre, langue, etc.).  
+  3. (Optionnel) Uploader un avatar ou une image de profil si souhaité.
 
 ---
 
@@ -255,23 +263,25 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 
 ### 6.1 **Base de Données des Cartes (MVP)**
 - **Champs Minimaux** :  
-  - Nom, extension, rareté, type, HP.  
-- **Stockage du visuel** : Optionnel pour le MVP (peut être un lien ou un ID d’image).  
-- **Différenciation possédé/manquant** : Lier l’utilisateur et la carte via une table pivot (ex. `user_cards`) indiquant la quantité possédée.
+  - Nom, extension, rareté, type, HP, **URL du visuel** (champ obligatoire pour l’affichage d’image).  
+- **Différenciation possédé/manquant** :  
+  - Table pivot `user_cards` indiquant la quantité possédée par l’utilisateur.  
+- **Gestion des visuels** :  
+  - Stockage possible sous forme d’URL (hébergement tiers) ou d’un chemin interne si l’appli héberge les images.  
+  - Chargement optimisé (pagination, cache) à envisager.
 
 ### 6.2 **Intégration aux API Externes**
 - **État MVP** : Les données peuvent être saisies ou importées manuellement, sans intégration obligatoire d’API.  
 - **Évolutions Futures** :  
-  - Utiliser des APIs (TCGdex, Pokémon TCG API) pour enrichir automatiquement la base de données (rareté, extension, images HD, etc.).  
-  - Connecter un service tiers de reconnaissance d’image (pour la fonctionnalité « Scan Automatique de Cartes »).
+  - Utiliser des APIs (TCGdex, Pokémon TCG API) pour enrichir la base de données (rareté, extension, images HD, etc.).  
+  - Connecter un service tiers de reconnaissance d’image pour une potentielle **Scan Automatique de Cartes**.
 
-### 6.3 **Modèle d’Entités**
-- **Exemple Simplifié** :  
-  - Table `users` (id, email, password, etc.)  
-  - Table `cards` (id, name, expansion, rarity, type, hp, etc.)  
-  - Table `user_cards` (user_id, card_id, quantity)  
-  - Table `decks` (id, user_id, deck_name, etc.)  
-  - Table `deck_cards` (deck_id, card_id, quantity)
+### 6.3 **Modèle d’Entités** (Exemple Simplifié)
+- `users` : (id, email, password, etc.)  
+- `cards` : (id, name, expansion, rarity, type, hp, **image_url**, etc.)  
+- `user_cards` : (user_id, card_id, quantity)  
+- `decks` : (id, user_id, deck_name, etc.)  
+- `deck_cards` : (deck_id, card_id, quantity)
 
 ---
 
@@ -279,26 +289,28 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 
 ### 7.1 **Principes Généraux**
 - **Clarté et ergonomie** : Navigation minimale (Collection, Decks, Profil).  
-- **Adapté aux collectionneurs et joueurs** : Distinction claire entre cartes possédées et manquantes (colorées vs. grisées).  
+- **Adapté aux collectionneurs et joueurs** : Distinction claire entre cartes possédées (en couleur) et manquantes (grisées).  
 - **Filtres de base** : Simples et rapides à utiliser (nom, extension, rareté).  
-- **Mode clair/sombre** : Possibilité de personnalisation basique.
+- **Mode clair/sombre** : Possibilité de personnalisation basique.  
+- **Affichage des images** : Galerie avec zoom possible.
 
 ### 7.2 **Vue Collection**
 - **Tableau de bord** : Nombre total de cartes possédées, aperçu des extensions (facultatif pour le MVP).  
-- **Liste ou Galerie** : Vue personnalisable pour chaque utilisateur.  
-- **Ajouter une carte** : Bouton accessible, menant à un formulaire d’ajout.
+- **Liste ou Galerie** : Mode sélectionnable par l’utilisateur (vignettes ou liste détaillée).  
+- **Ajouter une carte** : Bouton menant au formulaire d’ajout (nom, extension, rareté, type, HP, image).  
+- **Zoom sur une carte** : Clique ou tape sur la vignette pour l’agrandir dans une pop-up ou une page dédiée.
 
 ### 7.3 **Vue Decks**
 - **Gestion de decks** : Création, édition, suppression.  
-- **Aperçu** : Nombre de cartes, types principaux, etc.  
-- **Accès rapide** : Un clic pour voir la composition complète du deck.
+- **Aperçu** : Nombre de cartes, types principaux (petit résumé visuel).  
+- **Accès rapide** : Un clic pour voir la composition complète du deck avec les images miniatures.
 
 ### 7.4 **Vue Profil**
 - **Informations de compte** : Nom d’utilisateur, email, préférence d’affichage.  
 - **Modification mot de passe** : Processus sécurisé.  
 - **Déconnexion** : Bouton pour quitter la session.
 
-> **Améliorations futures** : Tutoriels interactifs, notifications intelligentes, profils publics, etc. (voir section 4.2).
+> **Améliorations Futures** : Tutoriels interactifs, notifications intelligentes, profils publics, etc. (voir section 4.2).
 
 ---
 
@@ -330,15 +342,15 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 
 1. **Lot 1 : MVP**  
    - Authentification  
-   - Gestion basique de la collection (ajout, modification, suppression, visualisation)  
+   - Gestion basique de la collection (ajout, modification, suppression, visualisation avec images)  
    - Construction manuelle de decks  
    - Export CSV  
-   - Interface simple  
+   - Interface simple (liste ou galerie, zoom sur carte)
 
 2. **Lot 2 : Optimisations et Premières Extensions**  
    - Critères avancés pour la construction de decks (analyse de la répartition des types, etc.)  
    - Récupération automatisée de certaines données via API (si nécessaire)  
-   - Possibilité d’introduire des statistiques avancées sur la collection (barres, camemberts simples).
+   - Possibilité d’introduire des statistiques avancées sur la collection (graphes, camemberts).
 
 3. **Lot 3 : Simulation & Gamification**  
    - Simulation basique de matchs (modèle simple)  
@@ -358,12 +370,12 @@ Cette section regroupe à la fois les fonctionnalités déjà identifiées comme
 
 ## 10. **Conclusion**
 
-Le présent document pose les **bases** du projet Pokémon Manager et détaille :
+Le présent document définit :
 
-- Les **fonctions essentielles** pour le MVP (authentification, gestion de la collection, decks manuels, export CSV, interface simple).  
+- Les **fonctions essentielles** pour le MVP (authentification, gestion de la collection avec visuels, decks manuels, export CSV, interface simple).  
 - Les **fonctionnalités futures**, déjà identifiées comme hors MVP (partage communautaire, gamification, simulation de matchs, etc.).  
-- **De nouvelles pistes innovantes**, réparties selon les axes d’analyse, de collaboration, d’amélioration du parcours utilisateur et d’extensions techniques.  
-- Les **cas d’usage** assurant une expérience claire et utile dès la première version.  
-- L’**architecture technique** de référence pour bâtir un système robuste, extensible et maintenable.  
+- **De nouvelles pistes** (analyse de synergies, échanges directs, tutoriels, etc.) pour améliorer l’expérience sur le long terme.  
+- Les **cas d’usage** garantissant une expérience claire dès la première version (visualisation avec images, ajout de cartes, création de decks…).  
+- L’**architecture technique** nécessaire pour un système évolutif et maintenable.
 
-Ce document constitue ainsi un **socle solide** : le MVP devra être réalisé en priorité, tandis que les fonctionnalités additionnelles et les pistes de monétisation pourront être intégrées de manière itérative en fonction des retours utilisateurs, de l’évolution du marché et de la stratégie globale du projet.
+Ce socle doit être développé en priorité pour valider la **première version** auprès des utilisateurs. Les fonctionnalités additionnelles (pistes innovantes, monétisation, expansions communautaires) pourront être intégrées **progressivement** selon l’évolution du projet, les retours et la stratégie à long terme.
